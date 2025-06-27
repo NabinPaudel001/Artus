@@ -4,7 +4,6 @@ import AnimatedAnchor from "@/components/AnimatedAnchor";
 import Logo from "@/components/Logo";
 import config from "@/config/config.json";
 import menu from "@/config/menu.json";
-import ImageFallback from "@/helpers/ImageFallback";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
@@ -70,6 +69,7 @@ const Header = () => {
             className="hidden"
             checked={mobileMenuOpen}
             onChange={toggleMobileMenu}
+            title="Toggle navigation menu"
           />
           <label
             htmlFor="nav-toggle"
@@ -226,7 +226,12 @@ const Header = () => {
                       <Link
                         href={menu.url || "#"}
                         aria-label={menu.name}
-                        className={`nav-link block ${(pathname === `${menu.url}/` ||
+                        className={`nav-link block rounded-full px-4 py-2
+  transition duration-300 ease-in-out
+  hover:text-white
+  hover:shadow-[0_0_6px_rgba(255,255,255,0.9),0_0_10px_rgba(239,68,68,0.8),0_0_20px_rgba(239,68,68,0.6)]
+  hover:ring-2 hover:ring-red-500
+  hover:bg-black/40  ${(pathname === `${menu.url}/` ||
                           pathname === menu.url) &&
                           "active"
                           }`}
@@ -242,7 +247,7 @@ const Header = () => {
               <AnimatedAnchor
                 link={navigation_button.link}
                 label={navigation_button.label}
-                className="btn-primary bg-transparent mt-2 lg:hidden bg-none"
+                className="btn-primary bg-transparent mt-2 lg:hidden bg-none "
               />
             )}
           </ul>
@@ -259,7 +264,7 @@ const Header = () => {
       </header>
 
       {/* Background Pattern Image Show Only Home & Changelog Page */}
-      {(pathname === "/" || pathname.startsWith("/changelog")) && (
+      {/* {(pathname !== "/" && pathname.startsWith("/changelog")) && (
         <div aria-hidden="true">
           <ImageFallback
             className="pointer-events-none absolute inset-x-0 top-[80%] -z-10 w-full -translate-y-2/4 object-cover p-0 md:top-[95%]"
@@ -270,15 +275,17 @@ const Header = () => {
             height={1080}
           />
         </div>
-      )}
+      )} */}
 
       {/* Gradient Background Overlay Show Other Pages Except Home */}
-      {pathname !== "/" && !pathname.startsWith("/changelog") && (
-        <div
+      {        <div
           aria-hidden="true"
-          className="pointer-events-none absolute left-1/2 top-[-82px] -z-10 h-[424px] w-full -translate-x-1/2 rounded-full from-secondary via-secondary to-red-700 to-90% opacity-60 blur-[100px] bg-gradient-to-r lg:w-[884px] lg:rotate-[-19deg]"
+          // className="pointer-events-none absolute left-1/2  -z-10 h-[424px] w-full -translate-x-1/2 rounded-full from-secondary via-secondary to-red-700 to-90% opacity-60 blur-[100px] bg-gradient-to-r lg:w-[1280px] lg:rotate-[-10deg]"
+        // className="pointer-events-none absolute left-1/2 -z-10 h-[424px] w-full -translate-x-1/2 rounded-full opacity-60 blur-[120px] bg-gradient-to-r from-[#0f172a] via-[#1e3a8a] to-[#b91c1c] lg:w-[1280px] lg:rotate-[-8deg]"
+      className="pointer-events-none absolute left-1/2 -z-10 -top-5 h-[480px] w-[110%] -translate-x-14/24 rounded-full opacity-70 blur-[160px] bg-gradient-to-r from-[#0f172a] via-[#1b53ee] via-40% via-opacity-90 to-[#dc2626] to-80% lg:w-[1280px] lg:rotate-[-6deg]"
+
         />
-      )}
+      }
     </>
   );
 };

@@ -66,16 +66,26 @@
 .btn-sm {
   @apply px-4 py-1.5 text-base-sm md:text-sm;
 }
-
 .btn-primary {
-  @apply border border-border bg-primary text-white hover:text-white;
-  @apply from-black/0 via-neutral-900/70 via-60% to-neutral-800/80 bg-gradient-to-r;
+  @apply text-white bg-gradient-to-r from-neutral-900 via-neutral-800/80 to-black/90;
+  @apply hover:bg-black/40;
+  @apply hover:ring-1 hover:ring-red-500;
+  @apply hover:shadow-[0_0_6px_rgba(255,255,255,0.9),0_0_10px_rgba(239,68,68,0.8),0_0_20px_rgba(239,68,68,0.6)];
+  @apply transition duration-300 ease-in-out;
 }
 
 .btn-inline {
-  @apply border border-transparent bg-transparent p-0 text-white hover:bg-dark/10 hover:text-white;
+  @apply border-transparent bg-transparent p-0 text-white;
+  @apply hover:bg-black/30;
+  @apply hover:ring-1 hover:ring-red-500;
+  @apply hover:shadow-[0_0_6px_rgba(255,255,255,0.9),0_0_10px_rgba(239,68,68,0.8),0_0_20px_rgba(239,68,68,0.6)];
+  @apply transition duration-300 ease-in-out;
 }
 
 .btn-outline-transparent {
-  @apply border-border bg-transparent text-white hover:text-white;
+  @apply bg-transparent text-white;
+  @apply hover:bg-black/40;
+  @apply hover:ring-1 hover:ring-red-500;
+  @apply hover:shadow-[0_0_6px_rgba(255,255,255,0.9),0_0_10px_rgba(239,68,68,0.8),0_0_20px_rgba(239,68,68,0.6)];
+  @apply transition duration-300 ease-in-out;
 }

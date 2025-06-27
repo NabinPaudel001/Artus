@@ -1,7 +1,7 @@
 ---
 # Banner
 note: Awarded as the best startup in 2025
-title: "Earn revenue by selling anything from the internet on your app."
+title: "Building Digital Infrastructure for Modern Enterprises."
 description: Gain invaluable predictive analytics and actionable insights empowering.
 
 image:
