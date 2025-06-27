@@ -4,7 +4,7 @@ import { getListPage } from "@/lib/contentParser";
 import { markdownify } from "@/lib/utils/textConverter";
 
 const HomeBanner = () => {
-  const { title, description, buttons} = getListPage(
+  const { title, buttons} = getListPage(
     "sections/home-banner.md",
   ).frontmatter;
   return (
