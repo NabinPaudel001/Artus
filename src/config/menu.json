@@ -10,7 +10,11 @@
     },
     {
       "name": "Services ",
-      "url": "/about/"
+      "url": "/services/"
+    },
+    {
+      "name": "Projects ",
+      "url": "/projects/"
     },
     {
       "name": "Contact",

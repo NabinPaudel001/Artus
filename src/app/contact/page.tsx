@@ -1,5 +1,5 @@
 import { getListPage } from "@/lib/contentParser";
-import CallToAction1 from "@/partials/CallToAction1";
+// import CallToAction1 from "@/partials/CallToAction1";
 import ContactFormSection from "@/partials/ContactFormSection";
 import ContactHero from "@/partials/ContactHero";
 import SeoMeta from "@/partials/SeoMeta";
@@ -13,7 +13,7 @@ const Contact = async () => {
       <SeoMeta {...data.frontmatter} />
       <ContactHero />
       <ContactFormSection />
-      <CallToAction1 />
+      {/* <CallToAction1 /> */}
     </>
   );
 };

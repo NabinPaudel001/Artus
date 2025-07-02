@@ -13,15 +13,25 @@ const FeaturesStickyLayout = ({ sticky = true }: { sticky?: boolean }) => {
       <div className="container">
         {features?.map((item: Feature["frontmatter"], mindex: number) => {
           const { title, description, list, images, button } = item;
+          const isEven = mindex % 2 === 0;
 
           return (
             <div
               key={mindex}
-              className={`overflow-hidden rounded-3xl border border-border bg-primary ${!sticky ? `mb-10 last:mb-0 ` : `max-lg:mb-10 max-lg:last:mb-0 lg:sticky ` + (mindex === 1 ? "lg:top-[160px]" : "lg:top-[120px]")}`}
+              className={`overflow-hidden rounded-3xl border border-border bg-primary ${
+                !sticky
+                  ? `mb-10 last:mb-0`
+                  : `max-lg:mb-10 max-lg:last:mb-0 lg:sticky lg:top-[25px]`
+              }`}
             >
-              <div className="row">
-                <div className="lg:col-6" data-aos="fade-up-sm">
-                  <div className="min-h-full rounded-s-3xl py-8 pl-5 pr-4 md:py-16 md:pl-10 md:pr-9 lg:py-36 lg:pl-20 lg:pr-[70px]">
+              <div
+                className={`flex flex-col lg:flex-row ${
+                  !isEven ? "lg:flex-row-reverse" : ""
+                }`}
+              >
+                {/* Text Section */}
+                <div className="lg:w-1/2" data-aos="fade-up-sm">
+                  <div className="min-h-full rounded-s-3xl py-8 pl-5 pr-4 md:py-16 md:pl-10 md:pr-9 lg:py-36 lg:px-20">
                     {title && (
                       <h2
                         className="has-gradient mb-6"
@@ -46,7 +56,7 @@ const FeaturesStickyLayout = ({ sticky = true }: { sticky?: boolean }) => {
                           >
                             <DynamicIcon
                               icon="FaCheck"
-                              className="text-yellow-200 -mt-px inline-block mr-2.5 text-base"
+                              className="text-red-700 -mt-px inline-block mr-2.5 text-base"
                             />
                             <span dangerouslySetInnerHTML={markdownify(item)} />
                           </li>
@@ -62,54 +72,34 @@ const FeaturesStickyLayout = ({ sticky = true }: { sticky?: boolean }) => {
                     )}
                   </div>
                 </div>
-                <div className="lg:col-6">
-                  <div className="rounded-3xl bg-body lg:pl-5">
-                    <div className="flex min-h-full items-center px-5 md:justify-center md:px-10">
-                      <div
-                        className="relative py-10 md:w-[60%] lg:w-auto lg:py-20"
-                        data-aos="fade-up-sm"
-                        data-aos-delay="250"
-                      >
-                        {images?.map((item, index: number) => {
-                          // Add classes based on every row index number to first & second image
-                          const getClass = (mindex: number, index: number) => {
-                            switch (mindex) {
-                              case 0:
-                                return index === 0 ? "w-full" : "w-[60%] mt-6";
-                              case 1:
-                                return index === 0
-                                  ? "w-[76%] "
-                                  : "w-[70%] ml-[24%] mt-[-12%]";
-                              case 2:
-                                return index === 0
-                                  ? "w-[70%] mx-auto"
-                                  : "w-[55%] ml-6 mt-[-20%]";
-                              default:
-                                return index === 0
-                                  ? "w-[76%] "
-                                  : "w-[70%] ml-[24%] mt-[-12%]";
-                            }
-                          };
 
-                          return (
-                            <ImageFallback
-                              src={item}
-                              alt={title}
-                              className={`relative z-10 ${getClass(mindex, index)}`}
-                              key={index}
-                              width={500}
-                              height={500}
-                            />
-                          );
-                        })}
-                        <div
-                          aria-hidden="true"
-                          className="pointer-events-none absolute bottom-px left-2/4 z-0 h-[353px] w-[509px] flex-none -translate-x-2/4 rotate-[-19deg] rounded-full from-secondary/40 via-secondary via-60% to-primary opacity-60 blur-[207px] bg-gradient-to-tr"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
+{/* Image Section */}
+<div className="lg:w-1/2">
+  <div className="rounded-3xl bg-body">
+    <div className="flex min-h-full items-center">
+      <div
+        className="relative w-[90%] py-10 lg:py-20 mx-auto"
+        data-aos="fade-up-sm"
+        data-aos-delay="250"
+      >
+        {images?.[0] && (
+          <ImageFallback
+            src={images[0]}
+            alt={title}
+            className=" relative z-10 w-full h-auto"
+            width={800}
+            height={450}
+          />
+        )}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute bottom-px left-2/4 z-0 h-[353px] w-[509px] flex-none -translate-x-2/4 rotate-[-19deg] rounded-full from-secondary/40 via-secondary via-60% to-primary opacity-60 blur-[207px] bg-gradient-to-tr"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
               </div>
             </div>
           );

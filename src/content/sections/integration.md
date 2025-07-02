@@ -1,6 +1,6 @@
 ---
-title: Connect with 100+ tools
-description: Gain invaluable predictive analytics and actionable insights <br/> empowering your to make data-driven decisions.
+title: Tools & Technologies We Use
+description: Get a closer look at the technologies behind our success.</br> We carefully choose the right tools for each stage of development to build high-performing applications.
 
 button:
   enable: true

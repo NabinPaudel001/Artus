@@ -1,19 +1,62 @@
-import ImageFallback from "@/helpers/ImageFallback";
-import { getListPage } from "@/lib/contentParser";
-import { markdownify } from "@/lib/utils/textConverter";
+"use client";
 
-const CustomersLogo = () => {
-  const { title, list } = getListPage("sections/customers-logo.md").frontmatter;
+import { useEffect } from "react";
+import ImageFallback from "@/helpers/ImageFallback";
+
+interface CustomersLogoProps {
+  frontmatter: {
+    title: string;
+    list: string[];
+    count: string | number;
+  };
+}
+
+const CustomersLogo = ({ frontmatter }: CustomersLogoProps) => {
+  const { title, list, count } = frontmatter;
+
+  useEffect(() => {
+    const counter = document.getElementById("counter");
+    if (!counter) return;
+
+    let hasAnimated = false;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          hasAnimated = true;
+          let current = 0;
+          const end = parseInt(count.toString());
+          const step = Math.ceil(end / 100);
+
+          const interval = setInterval(() => {
+            current += step;
+            if (current >= end) {
+              current = end;
+              clearInterval(interval);
+            }
+            counter.textContent = current.toString();
+          }, 20);
+
+          observer.disconnect();
+        }
+      });
+    });
+
+    observer.observe(counter);
+
+    return () => observer.disconnect();
+  }, [count]);
 
   return (
-    <section className="section">
+    <section className="section" id="customers-section">
       <div className="container">
         <div className="row">
           <div className="col-12" data-aos="fade-up-sm">
             <div className="text-center sm:flex">
               <p
+                suppressHydrationWarning
                 className="w-full pb-3 text-center text-2xl/snug font-medium tracking-wide sm:whitespace-nowrap sm:pb-0"
-                dangerouslySetInnerHTML={markdownify(title)}
+                dangerouslySetInnerHTML={{ __html: title }}
               />
             </div>
           </div>
@@ -55,8 +98,6 @@ const CustomersLogo = () => {
             </div>
           </div>
         </div>
-        {/* Overlay */}
-        <div className="" />
       </div>
     </section>
   );

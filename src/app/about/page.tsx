@@ -1,7 +1,8 @@
 import { getListPage } from "@/lib/contentParser";
 import AboutBanner from "@/partials/AboutBanner";
-import CallToAction1 from "@/partials/CallToAction1";
+// import CallToAction1 from "@/partials/CallToAction1";
 import CareerCta from "@/partials/CareerCta";
+// import OurProjects from "@/partials/OurProjects";
 import OurTeam from "@/partials/OurTeam";
 import SeoMeta from "@/partials/SeoMeta";
 import Values from "@/partials/Values";
@@ -16,8 +17,9 @@ const About = () => {
       <AboutBanner />
       <Values />
       <OurTeam />
+      {/* <OurProjects />    */}
       <CareerCta />
-      <CallToAction1 />
+      {/* <CallToAction1 /> */}
     </>
   );
 };

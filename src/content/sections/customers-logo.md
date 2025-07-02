@@ -1,8 +1,8 @@
 ---
-# Our Customers
-title: Trusted by 15,000+ founders & business owners
+title: Trusted by <span id="counter" class="text-white font-bold">0</span>+ founders & business owners
+count: 100
 list:
-  - "/images/customers-logo/1.svg"
+  - "/images/artus.svg"
   - "/images/customers-logo/2.svg"
   - "/images/customers-logo/3.svg"
   - "/images/customers-logo/4.svg"

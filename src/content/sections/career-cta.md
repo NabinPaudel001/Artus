@@ -1,5 +1,5 @@
 ---
-title: We are hiring!
+title: Join Our Team!
 description: Gain invaluable predictive analytics and actionable insights.
 
 button:
