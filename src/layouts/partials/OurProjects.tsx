@@ -1,15 +1,28 @@
+import React from "react";
 import ProjectCard from "./ProjectCard";
 import { getListPage } from "@/lib/contentParser";
 import { markdownify } from "@/lib/utils/textConverter";
-import React from "react";
 
-interface Project {
+// Inline types (safe for server components)
+type TechItem = {
+  name: string;
+  icon: string;
+};
+
+type Project = {
   title: string;
-  description?: string;
-  image?: string;
+  description: string;
+  image: string;
   link?: string;
-  [key: string]: any;
-}
+  category: string;
+  year: string;
+  techstack: {
+    backend?: TechItem[];
+    frontend?: TechItem[];
+    app?: TechItem[];
+    platform?: TechItem[];
+  };
+};
 
 const OurProjects = () => {
   const { title, description, list } = getListPage(
@@ -18,8 +31,8 @@ const OurProjects = () => {
 
   return (
     <>
-      {/* Hero Text Section with AboutBanner-style title */}
-      <section className="section text-center text-white py-28 px-4" data-aos="fade-down">
+      {/* Header Section */}
+      <section className="section text-white text-center py-28 px-4" data-aos="fade-down">
         <div className="container mx-auto max-w-4xl">
           {title && (
             <h1
@@ -39,9 +52,17 @@ const OurProjects = () => {
       {/* Projects Showcase Section */}
       <section className="section pt-20">
         <div className="container">
-          <div className="row flex flex-col space-y-12" data-aos="fade-up-sm" data-aos-delay="200">
-            {list?.map((item: Project, i: number) => (
-              <ProjectCard key={i} data={item} reverse={i % 2 === 1} />
+          <div
+            className="row flex flex-col space-y-20"
+            data-aos="fade-up-sm"
+            data-aos-delay="200"
+          >
+            {list?.map((project: Project, index: number) => (
+              <ProjectCard
+                key={index}
+                data={project}
+                reverse={index % 2 === 1}
+              />
             ))}
           </div>
         </div>
