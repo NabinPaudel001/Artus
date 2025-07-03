@@ -8,7 +8,7 @@ const AboutBanner = () => {
   ).frontmatter;
 
   return (
-    <section className="section">
+    <section className="section" id="about-banner">
       <div className="container">
         <div className="row">
           <div className="lg:col-4" data-aos="fade-up-sm">

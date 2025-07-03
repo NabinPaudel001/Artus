@@ -1,29 +1,7 @@
 ---
 title: Flutter
 image: "/images/integration/flutter.svg"
-description: For Frontend Cross-platform App Design
+description: Google’s UI toolkit for building natively compiled, beautiful cross-platform apps from a single codebase.
 meta_title: ""
-type: Programming Language
-
-button:
-  enable: false
-  label: "View Integration"
-  link: "#?"
+type: UI Framework
 ---
-
-#### How to integrate Darkrise with Slack?
-
-Gain invaluable predictive analytics and actionable insights, empowering your to make data-driven decisions and close deals more effectively looking. morbi curabitur etiam nibh justo, lorem aliquet donec sed sit mi dignissim at ante massa mattis.
-
-1. Neque sodales ut etiam sit amet nisl purus non tellus orci ac auctor
-2. Adipiscing elit ut aliquam purus sit amet viverra suspendisse potenti
-3. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar
-4. Adipiscing elit ut aliquam purus sit amet viverra suspendisse potenti
-
-#### Features available in the Integration
-
-Gain invaluable predictive analytics and actionable insights, empowering your to make data-driven decisions and close deals more effectively looking. morbi curabitur etiam nibh justo, lorem aliquet donec sed sit mi dignissim at ante massa mattis.
-
-<br />
-
-<Button label="Connect Mailchimp" link="#" />

@@ -7,7 +7,7 @@ const Values = () => {
     getListPage("sections/values.md").frontmatter;
 
   return (
-    <section className="section">
+    <section className="section" id="values">
       <div className="container">
         <div className="row">
           <div className="mx-auto text-center lg:col-6" data-aos="fade-up-sm">

@@ -11,41 +11,54 @@ interface CustomersLogoProps {
   };
 }
 
+
 const CustomersLogo = ({ frontmatter }: CustomersLogoProps) => {
   const { title, list, count } = frontmatter;
 
-  useEffect(() => {
-    const counter = document.getElementById("counter");
-    if (!counter) return;
+useEffect(() => {
+  const animateCounter = (id: string, end: number) => {
+    const el = document.getElementById(id);
+    if (!el) return;
 
-    let hasAnimated = false;
+    let current = 0;
+    const step = Math.max(1, Math.floor(end / 200)); // Smaller step = slower count
+    const delay = 25; // Slower step interval in ms
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && !hasAnimated) {
-          hasAnimated = true;
-          let current = 0;
-          const end = parseInt(count.toString());
-          const step = Math.ceil(end / 100);
+    const interval = setInterval(() => {
+      current += step;
+      if (current >= end) {
+        current = end;
+        clearInterval(interval);
+      }
+      el.textContent = current.toString();
+    }, delay);
+  };
 
-          const interval = setInterval(() => {
-            current += step;
-            if (current >= end) {
-              current = end;
-              clearInterval(interval);
-            }
-            counter.textContent = current.toString();
-          }, 20);
+  const counter = document.getElementById("counter");
+  const counter2 = document.getElementById("counter2");
 
-          observer.disconnect();
-        }
-      });
+  if (!counter || !counter2) return;
+
+  let hasAnimated = false;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && !hasAnimated) {
+        hasAnimated = true;
+
+        animateCounter("counter", parseInt(count.toString())); // e.g. 500
+        animateCounter("counter2", 1500); // second counter
+
+        observer.disconnect();
+      }
     });
+  });
 
-    observer.observe(counter);
+  observer.observe(counter);
+  observer.observe(counter2);
 
-    return () => observer.disconnect();
-  }, [count]);
+  return () => observer.disconnect();
+}, [count]);
 
   return (
     <section className="section" id="customers-section">

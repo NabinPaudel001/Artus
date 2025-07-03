@@ -14,6 +14,6 @@ buttons:
     link: "/contact/"
   - enable: true
     label: "Artus Team"
-    link: "/contact/"
+    link: "/about/#team"
 
 

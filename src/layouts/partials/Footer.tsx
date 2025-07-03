@@ -1,119 +1,121 @@
 import Logo from "@/components/Logo";
 import config from "@/config/config.json";
 import menu from "@/config/menu.json";
+import Image from "next/image";
+
+type MenuItem = {
+  name: string;
+  url?: string;
+  children?: { name: string; url?: string }[];
+};
 
 const Footer = () => {
-  const { footer, company, product, resources, services } = menu;
+  const { footer, main } = menu as {
+    footer?: MenuItem[];
+    main?: MenuItem[];
+  };
 
-  // Function to replace {year} this from string to year
-  function replaceYear(text: string) {
+  const replaceYear = (text: string) => {
     const year = new Date().getFullYear();
-
     return text.replace("{year}", year.toString());
-  }
+  };
 
   return (
-    <footer className="py-10 md:py-16 xl:py-24">
-      <div className="container" data-aos="fade-up-sm">
-        <div className="row gy-6 justify-between lg:g-4">
-          <div className="col-12 pb-7 md:pb-14">
-            <Logo footerLogo={true} />
-          </div>
-          <div className="sm:col-6 md:col-auto">
-            <h3 className="mb-8 text-base tracking-none text-white/50">
-              Company
-            </h3>
-            <ul className="flex flex-col gap-3">
-              {company.map((item, i) => (
-                <li key={`${item.name}-${i}`}>
-                  <a
-                    className="font-medium transition text-text/90 hover:text-text/60"
-                    href={item.url}
-                  >
-                    {item.name}
-                  </a>
-                </li>
+    <footer className="bg-dark pt-5 pb-5 text-white">
+      <div className="container">
+        {/* Top Section */}
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-10 mb-5">
+          {/* Left: Logo & Contact */}
+          <div className="text-center md:text-left">
+            <Logo />
+            <p className="pt-5 text-xl font-semibold mb-4">(+977) 985-1077114</p>
+            <div className="flex justify-center md:justify-start gap-4">
+              {["facebook", "email", "twitter", "linkedin"].map((platform, i) => (
+                <a
+                  key={i}
+                  href="#"
+                  className="btn-primary w-10 h-10 flex items-center justify-center rounded-full  transition"
+                  aria-label={platform}
+                >
+                  <Image
+                    src={`/images/icons/svg/${platform}.svg`}
+                    alt={`${platform} icon`}
+                    width={20}
+                    height={20}
+                  />
+                </a>
               ))}
-            </ul>
-          </div>
-          <div className="sm:col-6 md:col-auto">
-            <h3 className="mb-8 text-base tracking-none text-white/50">
-              Product
-            </h3>
-            <ul className="flex flex-col gap-3">
-              {product.map((item, i) => (
-                <li key={`${item.name}-${i}`}>
-                  <a
-                    className="font-medium transition text-text/90 hover:text-text/60"
-                    href={item.url}
-                  >
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="sm:col-6 md:col-auto">
-            <h3 className="mb-8 text-base tracking-none text-white/50">
-              Resources
-            </h3>
-            <ul className="flex flex-col gap-3">
-              {resources.map((item, i) => (
-                <li key={`${item.name}-${i}`}>
-                  <a
-                    className="font-medium transition text-text/90 hover:text-text/60"
-                    href={item.url}
-                  >
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="sm:col-6 md:col-auto">
-            <h3 className="mb-8 text-base tracking-none text-white/50">
-              Services
-            </h3>
-            <ul className="flex flex-col gap-3">
-              {services.map((item, i) => (
-                <li key={`${item.name}-${i}`}>
-                  <a
-                    className="font-medium transition text-text/90 hover:text-text/60"
-                    href={item.url}
-                  >
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="col-12 pt-5 md:pt-20">
-            <div className="flex flex-col md:flex-row justify-between border-t border-border pt-10 pb-5">
-              {config.params.copyright && (
-                <div>
-                  <p className="text-sm text-white/60">
-                    {replaceYear(config.params.copyright)}
-                  </p>
-                </div>
-              )}
-              {
-                <div>
-                  <ul className="flex md:justify-end gap-4">
-                    {footer?.map((item, i) => (
-                      <li key={`${item.name}-${i}`}>
-                        <a
-                          className="text-sm text-white/60 transition hover:text-secondary"
-                          href={item.url}
-                        >
-                          {item.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              }
             </div>
           </div>
+
+          {/* Right: Address & CTA */}
+          <div className="text-center md:text-right">
+            <p className="font-semibold uppercase mb-2">Nepal</p>
+            <p>Bagmati Province</p>
+            <p>Lalitpur District</p>
+            <p>Jhamsikhel, Lalitpur 44671</p>
+
+            <div className="mt-6">
+              <a
+                href="/contact"
+                target="_blank"
+                className="inline-block btn-primary px-5 py-2 rounded font-semibold hover:bg-secondary transition"
+              >
+                Connect with us
+              </a>
+            </div>
+          </div>
+        </div>
+{/* Middle Section: Header Nav Links */}
+<div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-y-10 gap-x-6">
+  {main?.map((item, index) => (
+    <div key={index} className="mx-auto text-center">
+      <a
+        href={item.url || "#"}
+        className="block text-white font-semibold hover:text-red-700 hover:underline underline-offset-4 transition mb-3"
+      >
+        {item.name}
+      </a>
+      <ul className="space-y-2">
+        {Array.isArray(item.children) &&
+          item.children.map((child, subIndex) => (
+            <li key={subIndex}>
+              <a
+                href={child.url || "#"}
+                className="inline-block text-white/70 hover:text-primary transition"
+              >
+                {child.name}
+              </a>
+            </li>
+          ))}
+      </ul>
+    </div>
+  ))}
+</div>
+
+
+
+        <hr className="border-white/30 my-5" />
+
+        {/* Bottom Section */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-sm">
+          {/* Footer Menu */}
+          <ul className="flex flex-wrap justify-center md:justify-start gap-6 font-medium">
+            {footer?.map((item, i) => (
+              <li key={i}>
+                <a href={item.url} className="hover:text-shadow-red-700 transition">
+                  {item.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          {/* Copyright */}
+          {config.params?.copyright && (
+            <p className="text-white/60 text-center md:text-right">
+              {replaceYear(config.params.copyright)}
+            </p>
+          )}
         </div>
       </div>
     </footer>

@@ -59,7 +59,7 @@ const Header = () => {
       >
         <nav className="navbar container relative z-10">
           {/* logo  */}
-          <div className="order-0">
+          <div className="order-0 lg:pr-10 pl-2 lg:pl-10">
             <Logo />
           </div>
           {/* navbar toggler  */}
@@ -226,7 +226,7 @@ const Header = () => {
                       <Link
                         href={menu.url || "#"}
                         aria-label={menu.name}
-                        className={`nav-link block rounded-full px-4 py-2
+                        className={`nav-link block rounded-full pr-5 px-4 py-2
   transition duration-300 ease-in-out
   hover:text-white
   hover:shadow-[0_0_6px_rgba(255,255,255,0.9),0_0_10px_rgba(239,68,68,0.8),0_0_20px_rgba(239,68,68,0.6)]

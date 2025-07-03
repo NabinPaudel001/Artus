@@ -15,39 +15,6 @@
     {
       "name": "Projects ",
       "url": "/projects/"
-    },
-    {
-      "name": "Contact",
-      "url": "/contact/"
     }
-  ],
-  "footer": [
-    { "name": "Privacy Policy", "url": "/privacy-policy/" },
-    { "name": "Terms & Conditions", "url": "/terms-conditions/" }
-  ],
-  "company": [
-    { "name": "About", "url": "/about/" },
-    { "name": "Product Features", "url": "/feature/" },
-    { "name": "Changelog", "url": "/changelog/" },
-    { "name": "Contact", "url": "/contact/" }
-  ],
-  "product": [
-    { "name": "Pricing & Plans", "url": "/pricing/" },
-    { "name": "Product Features", "url": "/feature/" },
-    { "name": "Integration", "url": "/integration/" },
-    { "name": "Integration Details", "url": "/integration/kickstar/" }
-  ],
-  "resources": [
-    { "name": "Blog", "url": "/blog/" },
-    {
-      "name": "Blog Details",
-      "url": "/blog/post-1/"
-    },
-    { "name": "Changelog", "url": "/changelog/" }
-  ],
-  "services": [
-    { "name": "Elements", "url": "/elements" },
-    { "name": "Contact", "url": "/contact/" },
-    { "name": "404", "url": "/404/" }
   ]
 }

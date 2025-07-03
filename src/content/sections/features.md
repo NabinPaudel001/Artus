@@ -12,15 +12,15 @@
     enable: true
     label: "Get Started Now"
     link: "/"
-- title: Network App Solution 
+- title: Network App Solution
   images:
     - "/images/features/nnetwork.png"
-  description: We offer complete web and software development services, covering both front-end and back-end technologies. Our team ensures fast, secure, and scalable applications that perform seamlessly across platforms.
+  description: We design and develop high-performance network applications that ensure secure, reliable, and scalable connectivity across platforms and devices.
   list:
-    - Modern Frameworks
-    - Database Management
-    - API Integration
-    - Agile Development
+    - Live Chat
+    - Data Security
+    - Scalable Architecture
+    - Protocol Integration
   button:
     enable: true
     label: "Get Started Now"
@@ -67,12 +67,12 @@
 - title: E-Commerce Solutions
   images:
     - "/images/features/ecommerce.png"
-  description: We develop intelligent systems that automate processes, enhance decision-making, and bring predictive power to your data.
+  description: We create dynamic e-commerce platforms that boost sales and deliver exceptional user experiences through smart automation and deep customer insights.
   list:
-    - Custom ML Models
-    - NLP & LLMs
-    - Computer Vision
-    - Data Pipeline
+    - Personalized Shopping
+    - Secure Payments
+    - Inventory Management
+    - Marketing Analytics
   button:
     enable: true
     label: "Get Started Now"
@@ -80,25 +80,25 @@
 - title: IT Consultancy & Advice
   images:
     - "/images/features/itconsulting.png"
-  description: We develop intelligent systems that automate processes, enhance decision-making, and bring predictive power to your data.
+  description: Expert guidance to help your business leverage technology effectively. We provide strategic IT consulting, risk assessment, and tailored solutions to align IT with your goals.
   list:
-    - Custom ML Models
-    - NLP & LLMs
-    - Computer Vision
-    - Data Pipeline
+    - Strategy Planning
+    - Infrastructure Audit
+    - Cybersecurity Advice
+    - Cloud Migration
   button:
     enable: true
     label: "Get Started Now"
     link: "/"
-- title: Graphics design & Multimedia Solutions
+- title: Graphics Design & Multimedia Solutions
   images:
     - "/images/features/graphicsk.png"
-  description: We develop intelligent systems that automate processes, enhance decision-making, and bring predictive power to your data.
+  description: Creative and impactful designs to elevate your brand’s presence across digital and print media. From visuals to multimedia content, we bring your ideas to life.
   list:
-    - Custom ML Models
-    - NLP & LLMs
-    - Computer Vision
-    - Data Pipeline
+    - Brand Identity
+    - Motion Graphics
+    - Video Production
+    - UX/UI Design
   button:
     enable: true
     label: "Get Started Now"
@@ -120,7 +120,7 @@
 - title: Outsourcing
   images:
     - "/images/features/outsourcing.png"
-  description: We offer skilled remote teams and individuals who seamlessly plug into your workflow, helping you scale efficiently without sacrificing quality.
+  description: We provide skilled remote teams and professionals who seamlessly integrate with your workflow, enabling efficient scaling without compromising quality.
   list:
     - Dedicated Teams
     - Flexible Models

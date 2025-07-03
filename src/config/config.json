@@ -11,7 +11,7 @@
     "logo_footer": "/images/artus.svg",
     "logo_footer_width": "225px",
     "logo_footer_height": "48px",
-    "logo_text": "Darkrise"
+    "logo_text": "Artus"
   },
 
   "settings": {
@@ -22,7 +22,7 @@
 
   "params": {
     "contact_form_action": "#",
-    "copyright": "Copyright © {year} Darkrise. All Rights Reserved"
+    "copyright": "Copyright © {year} Artus. All Rights Reserved"
   },
 
   "subscription": {
@@ -34,7 +34,7 @@
 
   "navigation_button": {
     "enable": true,
-    "label": "Work With Us",
+    "label": "Contact Us",
     "link": "/contact/"
   },
 
@@ -44,8 +44,8 @@
   },
 
   "metadata": {
-    "meta_author": "Themefisher",
+    "meta_author": "Artus",
     "meta_image": "/images/og-image.png",
-    "meta_description": "SaaS & Startup Template"
+    "meta_description": "Artus Official Website"
   }
 }

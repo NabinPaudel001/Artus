@@ -1,8 +1,7 @@
+import Script from "next/script";
 import { getListPage } from "@/lib/contentParser";
 import AboutBanner from "@/partials/AboutBanner";
-// import CallToAction1 from "@/partials/CallToAction1";
 import CareerCta from "@/partials/CareerCta";
-// import OurProjects from "@/partials/OurProjects";
 import OurTeam from "@/partials/OurTeam";
 import SeoMeta from "@/partials/SeoMeta";
 import Values from "@/partials/Values";
@@ -17,9 +16,38 @@ const About = () => {
       <AboutBanner />
       <Values />
       <OurTeam />
-      {/* <OurProjects />    */}
       <CareerCta />
-      {/* <CallToAction1 /> */}
+
+      {/* Scroll script to handle #team navigation after hydration */}
+      <Script id="scroll-to-team" strategy="afterInteractive">
+        {`
+          (function scrollToTeamSection() {
+            const hash = window.location.hash;
+            if (hash === '#team') {
+              let attempts = 0;
+              const tryScroll = () => {
+                const el = document.getElementById('team');
+                if (el) {
+                  el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                } else if (attempts < 20) {
+                  attempts++;
+                  setTimeout(tryScroll, 100);
+                }
+              };
+              tryScroll();
+            }
+          })();
+
+          window.addEventListener('hashchange', function () {
+            if (window.location.hash === '#team') {
+              const el = document.getElementById('team');
+              if (el) {
+                el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+            }
+          });
+        `}
+      </Script>
     </>
   );
 };

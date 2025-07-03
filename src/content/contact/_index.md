@@ -32,12 +32,12 @@ hero:
         link: "/#?/"
 
 contact_form:
-  title: Get in touch with any <br/> general query.
+  title: Get in touch with any <br/> general query.</br></br>
   list:
     - icon: "/images/icons/svg/phone.svg"
       title: Give us a call
-      description: +603 555-0123
+      description: +977 985-1077114
     - icon: "/images/icons/svg/email.svg"
       title: Email
-      description: contact@darkrise.io
+      description: sudip@artus.com.np
 ---

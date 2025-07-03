@@ -1,4 +1,3 @@
-import AnimatedAnchor from "@/components/AnimatedAnchor";
 import ImageFallback from "@/helpers/ImageFallback";
 import { getListPage, getSinglePage } from "@/lib/contentParser";
 import { markdownify } from "@/lib/utils/textConverter";
@@ -75,12 +74,6 @@ const IntegrationCardLayout = () => {
                           )}
                         />
                       )}
-
-                      <AnimatedAnchor
-                        className="btn-inline mt-8"
-                        label={"View Integration"}
-                        link={"/integration/" + slug + "/"}
-                      />
                     </div>
 
                     <div className="pointer-events-none absolute bottom-[-22%] right-[-40%] h-[180px] w-[335px] rotate-[-20deg] from-dark/0 to-secondary opacity-0 blur-[83px] transition-opacity duration-300 bg-gradient-to-l group-hover:opacity-100" />

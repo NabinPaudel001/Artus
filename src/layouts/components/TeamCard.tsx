@@ -1,14 +1,23 @@
-import DynamicIcon from "@/helpers/DynamicIcon";
-import ImageFallback from "@/helpers/ImageFallback";
+import React from "react";
 import { markdownify } from "@/lib/utils/textConverter";
+import ImageFallback from "@/helpers/ImageFallback";
 import { Team } from "@/types";
 
-const TeamCard = ({ data }: { data: Team }) => {
-  const { avatar, name, designation, content, social, style } = data;
+interface TeamCardProps {
+  data: Team & {
+    experience?: string;
+    description?: string;
+    education?: string;
+    style?: string;
+  };
+}
+
+const TeamCard = ({ data }: TeamCardProps) => {
+  const { avatar, name, designation, experience, education, description, style } = data;
 
   return (
-    <div className={` min-h-full ${(style && style) || ""}`}>
-      <div className="h-20 w-20 overflow-hidden rounded-full">
+    <div className={`min-h-full pb-10 ${style || ""}`}>
+      <div className="h-20 w-20 mx-auto overflow-hidden rounded-full">
         <ImageFallback
           src={avatar}
           className="rounded-full"
@@ -17,53 +26,33 @@ const TeamCard = ({ data }: { data: Team }) => {
           height={80}
         />
       </div>
+
       {name && (
         <h3
-          className="tracking-none mt-4 text-base md:text-lg"
+          className="tracking-none mt-4 text-base md:text-lg text-center"
           dangerouslySetInnerHTML={markdownify(name)}
         />
       )}
+
       {designation && (
-        <p
-          className="opacity-70"
-          dangerouslySetInnerHTML={markdownify(designation)}
-        />
-      )}
-      {content && (
-        <p
-          className="mt-4 opacity-80"
-          dangerouslySetInnerHTML={markdownify(content)}
-        />
+        <p className="opacity-70 text-center">{designation}</p>
       )}
 
-      {social && (
-        <ul className="mt-6 flex gap-3">
-          {social.map((social: { name: string; icon: string; url: string }) => (
-            <li key={social.name}>
-              <a
-                aria-label={social.name}
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-              >
-                <span className="sr-only">{social.name}</span>
-                {social.icon.startsWith("/images/") ? (
-                  <div className="relative flex h-12 w-12 items-center justify-center after:absolute after:inset-0 after:rounded-md after:bg-gradient-to-b after:from-white/10 after:to-slate-800/25 after:transition-all after:duration-300 after:content-[''] hover:after:scale-y-[-1]">
-                    <ImageFallback
-                      className="h-4 w-4 object-cover"
-                      src={social.icon}
-                      alt={`icon related to ${social.name}`}
-                      width={16}
-                      height={16}
-                    />
-                  </div>
-                ) : (
-                  <DynamicIcon className="inline-block" icon={social.icon} />
-                )}
-              </a>
-            </li>
-          ))}
-        </ul>
+      {education && (
+        <p className="opacity-50 text-center italic text-sm mt-1">
+          {education}
+        </p>
+      )}
+
+      {experience && (
+        <p className="opacity-60 text-center italic text-sm">{experience}</p>
+      )}
+
+      {description && (
+        <p
+          className="mt-4 opacity-80 text-center"
+          dangerouslySetInnerHTML={markdownify(description)}
+        />
       )}
     </div>
   );

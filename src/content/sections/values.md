@@ -1,14 +1,15 @@
 ---
 title: Our core values
-description: Gain invaluable predictive analytics and actionable insights, empowering your team to make data-driven decisions and close.
+description: Driving innovation and excellence with integrity, collaboration, and customer-focused solutions for secure, adaptable growth.
+
 list:
-  - icon: "/images/icons/svg/grow.svg" # get outline svg icons from here - https://www.svgrepo.com/vectors/security/outlined/
+  - icon: "/images/icons/svg/accuracy.svg"
     title: Accuracy and Attention
-    description: Gain invaluable predictive analytics and actionable insights, empowering your to make data-driven decisions.
-  - icon: "/images/icons/svg/collaboration.svg" # get outline svg icons from here - https://www.svgrepo.com/vectors/security/outlined/
+    description: Delivering precise insights with meticulous attention to detail for reliable decision-making.
+  - icon: "/images/icons/svg/intelligence.svg"
     title: Intelligence and Integrity
-    description: Gain invaluable predictive analytics and actionable insights, empowering your to make data-driven decisions.
-  - icon: "/images/icons/svg/tools.svg" # get outline svg icons from here - https://www.svgrepo.com/vectors/security/outlined/
+    description: Combining smart solutions with honest practices to build trust and long-term success.
+  - icon: "/images/icons/svg/management.svg"
     title: Management and Mobility
-    description: Gain invaluable predictive analytics and actionable insights, empowering your to make data-driven decisions.
+    description: Efficiently managing resources while enabling agile and flexible operations.
 ---

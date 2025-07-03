@@ -5,40 +5,35 @@ import { Team } from "@/types";
 import React from "react";
 
 const OurTeam = () => {
-  const { title, description, list } = getListPage(
-    "sections/our-team.md",
-  ).frontmatter;
+  const { title, description, list } = getListPage("sections/our-team.md").frontmatter;
+
   return (
-    <section className="section">
-      <div className="container">
-        <div className="row">
-          <div className="lg:col-10" data-aos="fade-up-sm">
-            {title && (
-              <h2
-                className="has-gradient mb-4"
-                dangerouslySetInnerHTML={markdownify(title)}
-              />
-            )}
-            {description && (
-              <p
-                className="text-lg/[inherit] opacity-80"
-                dangerouslySetInnerHTML={markdownify(description)}
-              />
-            )}
-          </div>
-          <div
-            className="col-12 pt-20"
-            data-aos="fade-up-sm"
-            data-aos-delay="200"
-          >
-            <div className="row gx-4 gy-5">
-              {list?.map((item: Team, i: number) => (
-                <div className="lg:col-4" key={i}>
-                  <TeamCard data={item} />
-                </div>
-              ))}
-            </div>
-          </div>
+    <section className="section" id="team">
+      <div className="container mx-auto px-4">
+        <div className="max-w-4xl mx-auto mb-10" data-aos="fade-up-sm">
+          {title && (
+            <h2
+              className="has-gradient mb-4 text-center text-3xl font-semibold"
+              dangerouslySetInnerHTML={markdownify(title)}
+            />
+          )}
+          {description && (
+            <p
+              className="text-center text-lg opacity-80"
+              dangerouslySetInnerHTML={markdownify(description)}
+            />
+          )}
+        </div>
+
+        {/* Grid for team members */}
+        <div
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 pt-20"
+          data-aos="fade-up-sm"
+          data-aos-delay="200"
+        >
+          {list?.map((item: Team & { education?: string }, i: number) => (
+            <TeamCard key={i} data={item} />
+          ))}
         </div>
       </div>
     </section>
