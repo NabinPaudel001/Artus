@@ -6,7 +6,7 @@ list:
     category: "Web App + Mobile App"
     year: "2022"
     description: "Ecommerce app that focuses on tech-based products and integrates local wallets for payments."
-    image: "/images/projects/ecommerce-app.jpg"
+    image: "/images/projects/ecommerceapp.png"
     techstack:
       backend:
         - name: "Laravel"
@@ -28,7 +28,7 @@ list:
     category: "Web App + Mobile App"
     year: "2023"
     description: "Ecommerce platform that sells virtual cards like Xbox, PlayStation, Steam, and more."
-    image: "/images/projects/virtual-cards-store.jpg"
+    image: "/images/projects/virtual-card.png"
     techstack:
       backend:
         - name: "Laravel"
@@ -48,7 +48,7 @@ list:
     category: "Game + Mobile App"
     year: "2023"
     description: "Multiplayer Nepali card games with real-time socket communication and central game server."
-    image: "/images/projects/playing-cards.jpg"
+    image: "/images/projects/card-game.jpg"
     techstack:
       backend:
         - name: "Node.js"
@@ -69,7 +69,7 @@ list:
     category: "Mobile App"
     year: "2022"
     description: "Find hospitals, doctors, book appointments and request blood donations from app."
-    image: "/images/projects/doctor-catalogue.jpg"
+    image: "/images/projects/doctor-app.png"
     techstack:
       app:
         - name: "Flutter"
@@ -79,7 +79,7 @@ list:
     category: "Mobile App"
     year: "2021"
     description: "Optimize truck load, manage shipments, track in real time and handle logistics ops."
-    image: "/images/projects/truck-load.jpg"
+    image: "/images/projects/shipment.png"
     techstack:
       backend:
         - name: "Laravel"
@@ -92,7 +92,7 @@ list:
     category: "Web App + Mobile App"
     year: "2015"
     description: "Manage courier orders, tracking, agents, deliveries, and notifications."
-    image: "/images/projects/courier-logistics.jpg"
+    image: "/images/projects/courier.png"
     techstack:
       backend:
         - name: "Laravel"
@@ -109,7 +109,7 @@ list:
     category: "Web App + Machine Learning"
     year: "2019"
     description: "Collaborative task platform using ML to assign work across platforms like GitLab & ActiveCollab."
-    image: "/images/projects/project-management.jpg"
+    image: "/images/projects/project-management.png"
     techstack:
       backend:
         - name: "Laravel"
@@ -131,7 +131,7 @@ list:
     category: "Web App"
     year: "2022"
     description: "Manage vehicle loans, EMIs, payment reminders, and closure with mobile support."
-    image: "/images/projects/loan-emi-vehicle.jpg"
+    image: "/images/projects/loan-emi-vehicle.png"
     techstack:
       backend:
         - name: "Laravel"
@@ -150,7 +150,7 @@ list:
     category: "Web App + Mobile App"
     year: "2023"
     description: "Handles EMI & device blocking/unblocking based on payment status via IMEI control."
-    image: "/images/projects/device-loan.jpg"
+    image: "/images/projects/device-loan.png"
     techstack:
       backend:
         - name: "Laravel"
@@ -171,7 +171,7 @@ list:
     category: "Web App + Subscriptions"
     year: "2021"
     description: "Drag-drop builder + campaign manager using SES, SQS, Redis, Docker, and custom JS libs."
-    image: "/images/projects/email-builder.jpg"
+    image: "/images/projects/email-builder.png"
     techstack:
       backend:
         - name: "Laravel"
@@ -193,7 +193,7 @@ list:
     category: "Web App + DevOps"
     year: "2020"
     description: "Deploy Laravel, WordPress, Node apps using bash & streaming build logs via socket.io."
-    image: "/images/projects/deploy-manager.jpg"
+    image: "/images/projects/deploy-manager.png"
     techstack:
       backend:
         - name: "Laravel"
@@ -207,7 +207,7 @@ list:
     category: "Web App"
     year: "2021"
     description: "Manages lead-gen LPs, mailers & code generators with modular outputs."
-    image: "/images/projects/lp-builder.jpg"
+    image: "/images/projects/lp-builder.png"
     techstack:
       backend:
         - name: "Laravel"
@@ -221,7 +221,7 @@ list:
     category: "Web App"
     year: "2021"
     description: "Scans plugins/security updates, sends backup + monthly status reports."
-    image: "/images/projects/wp-reporter.jpg"
+    image: "/images/projects/wp-reporter.png"
     techstack:
       backend:
         - name: "Laravel"
@@ -237,7 +237,7 @@ list:
     category: "Mobile App"
     year: "2024"
     description: "Sentiment-based profile matcher with dynamic questions, LLM reports & ML analysis."
-    image: "/images/projects/ml-matching.jpg"
+    image: "/images/projects/ml-matching.png"
     techstack:
       backend:
         - name: "Laravel"
@@ -254,7 +254,7 @@ list:
     category: "Web App"
     year: "2024"
     description: "Snippets browser like TailwindUI for Laravel, WordPress & JavaScript modules."
-    image: "/images/projects/ui-snippets.jpg"
+    image: "/images/projects/ui-snippets.png"
     techstack:
       backend:
         - name: "Laravel"
