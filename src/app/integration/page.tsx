@@ -1,5 +1,5 @@
 import { getListPage } from "@/lib/contentParser";
-import CallToAction2 from "@/partials/CallToAction2";
+// import CallToAction2 from "@/partials/CallToAction2";
 import IntegrationCardLayout from "@/partials/IntegrationCardLayout";
 import IntegrationSection from "@/partials/IntegrationSection";
 import SeoMeta from "@/partials/SeoMeta";
@@ -26,7 +26,7 @@ const IntegrationPage = () => {
         hideHeadingOverlay
       />
       <IntegrationCardLayout />
-      <CallToAction2 />
+      {/* <CallToAction2 /> */}
     </>
   );
 };

@@ -11,7 +11,7 @@
   button:
     enable: true
     label: "Get Started Now"
-    link: "/"
+    link: "/contact/"
 - title: Network App Solution
   images:
     - "/images/features/nnetwork.png"
@@ -24,7 +24,7 @@
   button:
     enable: true
     label: "Get Started Now"
-    link: "/"
+    link: "/contact/"
 - title: UI/UX Design
   images:
     - "/images/features/uidesign.png"
@@ -37,7 +37,7 @@
   button:
     enable: true
     label: "Get Started Now"
-    link: "/"
+    link: "/contact/"
 - title: Web hosting & Domain Registration.
   images:
     - "/images/features/webhost.png"
@@ -50,7 +50,7 @@
   button:
     enable: true
     label: "Get Started Now"
-    link: "/"
+    link: "/contact/"
 - title: AI & Machine Learning.
   images:
     - "/images/features/ai.png"
@@ -63,7 +63,7 @@
   button:
     enable: true
     label: "Get Started Now"
-    link: "/"
+    link: "/contact/"
 - title: E-Commerce Solutions
   images:
     - "/images/features/ecommerce.png"
@@ -76,7 +76,7 @@
   button:
     enable: true
     label: "Get Started Now"
-    link: "/"
+    link: "/contact/"
 - title: IT Consultancy & Advice
   images:
     - "/images/features/itconsulting.png"
@@ -89,7 +89,7 @@
   button:
     enable: true
     label: "Get Started Now"
-    link: "/"
+    link: "/contact/"
 - title: Graphics Design & Multimedia Solutions
   images:
     - "/images/features/graphicsk.png"
@@ -102,7 +102,7 @@
   button:
     enable: true
     label: "Get Started Now"
-    link: "/"
+    link: "/contact/"
 - title: Mobile App Development.
   images:
     - "/images/features/mobile.png"
@@ -116,7 +116,7 @@
   button:
     enable: true
     label: "Get Started Now"
-    link: "/"
+    link: "/contact/"
 - title: Outsourcing
   images:
     - "/images/features/outsourcing.png"
@@ -129,7 +129,7 @@
   button:
     enable: true
     label: "Get Started Now"
-    link: "/"
+    link: "/contact/"
 - title: Email & Banner Development
   images:
     - "/images/features/emaildev.png"
@@ -143,5 +143,5 @@
   button:
     enable: true
     label: "Get Started Now"
-    link: "/"
+    link: "/contact/"
 ---

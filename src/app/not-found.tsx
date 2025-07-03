@@ -1,5 +1,5 @@
 import AnimatedAnchor from "@/components/AnimatedAnchor";
-import CallToAction1 from "@/partials/CallToAction1";
+
 import SeoMeta from "@/partials/SeoMeta";
 
 const NotFound = async () => {
@@ -32,7 +32,6 @@ const NotFound = async () => {
           ></div>
         </div>
       </section>
-      <CallToAction1 />
     </>
   );
 };

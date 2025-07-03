@@ -6,6 +6,8 @@ import OurTeam from "@/partials/OurTeam";
 import SeoMeta from "@/partials/SeoMeta";
 import Values from "@/partials/Values";
 import { RegularPage } from "@/types";
+import OurTechStack from "@/partials/OurTechStack";
+import PreferredStack from "@/partials/PrefferedStack";
 
 const About = () => {
   const data: RegularPage = getListPage("about/_index.md");
@@ -17,6 +19,8 @@ const About = () => {
       <Values />
       <OurTeam />
       <CareerCta />
+      <OurTechStack />
+      <PreferredStack />
 
       {/* Scroll script to handle #team navigation after hydration */}
       <Script id="scroll-to-team" strategy="afterInteractive">

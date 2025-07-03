@@ -23,6 +23,7 @@ list:
           icon: "/images/integration/kotlin.svg"
         - name: "Android"
           icon: "/images/integration/android.svg"
+    domain: "Web Application"
 
   - title: "Virtual Cards and Games store"
     category: "Web App + Mobile App"
@@ -43,6 +44,7 @@ list:
       app:
         - name: "Flutter"
           icon: "/images/integration/flutter.svg"
+    domain: "Web Application"
 
   - title: "Realtime Playing Card Games"
     category: "Game + Mobile App"
@@ -64,6 +66,7 @@ list:
           icon: "/images/integration/swift.svg"
         - name: "Kotlin"
           icon: "/images/integration/kotlin.svg"
+    domain: "Web Application"
 
   - title: "Doctor Catalogue"
     category: "Mobile App"
@@ -74,6 +77,7 @@ list:
       app:
         - name: "Flutter"
           icon: "/images/integration/flutter.svg"
+    domain: "Web Application"
 
   - title: "Truck Load Management"
     category: "Mobile App"
@@ -87,6 +91,7 @@ list:
       app:
         - name: "Kotlin"
           icon: "/images/integration/kotlin.svg"
+    domain: "Web Application"
 
   - title: "Courier & Logistics System"
     category: "Web App + Mobile App"
@@ -104,6 +109,7 @@ list:
       app:
         - name: "Flutter"
           icon: "/images/integration/flutter.svg"
+    domain: "Web Application"
 
   - title: "Project Management Tool"
     category: "Web App + Machine Learning"
@@ -126,6 +132,7 @@ list:
       app:
         - name: "Flutter"
           icon: "/images/integration/flutter.svg"
+    domain: "Web Application"
 
   - title: "Loan & EMI Management - Vehicles"
     category: "Web App"
@@ -145,6 +152,7 @@ list:
           icon: "/images/integration/swift.svg"
         - name: "Kotlin"
           icon: "/images/integration/kotlin.svg"
+    domain: "Web Application"
 
   - title: "Loan & EMI Mgmt for Devices (w/ Blocking)"
     category: "Web App + Mobile App"
@@ -166,6 +174,7 @@ list:
           icon: "/images/integration/swift.svg"
         - name: "Kotlin"
           icon: "/images/integration/kotlin.svg"
+    domain: "Web Application"
 
   - title: "Email Builder & Campaign Tracker"
     category: "Web App + Subscriptions"
@@ -188,6 +197,7 @@ list:
       platform:
         - name: "Docker + K8s"
           icon: "/images/integration/docker.svg"
+    domain: "Web Application"
 
   - title: "Deployment Manager"
     category: "Web App + DevOps"
@@ -202,6 +212,7 @@ list:
           icon: "/images/integration/bash.svg"
         - name: "Socket.IO"
           icon: "/images/integration/socketio.svg"
+    domain: "Web Application"
 
   - title: "Landing Page Builder"
     category: "Web App"
@@ -216,6 +227,7 @@ list:
           icon: "/images/integration/mysql.svg"
         - name: "AWS SES"
           icon: "/images/integration/aws-ses.svg"
+    domain: "Web Application"
 
   - title: "WordPress Auto Maintenance Reports"
     category: "Web App"
@@ -232,6 +244,7 @@ list:
           icon: "/images/integration/aws-ses.svg"
         - name: "Redis"
           icon: "/images/integration/redis.svg"
+    domain: "Web Application"
 
   - title: "User Matching App w/ ML & LLM"
     category: "Mobile App"
@@ -249,6 +262,7 @@ list:
       app:
         - name: "Flutter"
           icon: "/images/integration/flutter.svg"
+    domain: "Web Application"
 
   - title: "UI Snippets Browser"
     category: "Web App"
@@ -261,4 +275,660 @@ list:
           icon: "/images/integration/Larvelsvg.svg"
         - name: "MySQL"
           icon: "/images/integration/mysql.svg"
+    domain: "Web Application"
+
+  - title: "Gold & Precious Metals Store"
+    category: "Web App"
+    year: "2023"
+    description: "Real-time price tracking of gold, silver, platinum with buy/sell features."
+    image: "/images/projects/gold-store.png"
+    techstack:
+      backend:
+        - name: "Magento 2"
+          icon: "/images/integration/magento.svg"
+        - name: "PHP"
+          icon: "/images/integration/php.svg"
+        - name: "MySQL"
+          icon: "/images/integration/mysql.svg"
+        - name: "Redis"
+          icon: "/images/integration/redis.svg"
+        - name: "Elasticsearch"
+          icon: "/images/integration/elasticsearch.svg"
+      frontend:
+        - name: "HTML"
+          icon: "/images/integration/html.svg"
+        - name: "Knockout.js"
+          icon: "/images/integration/knockout.svg"
+        - name: "LESS"
+          icon: "/images/integration/less.svg"
+        - name: "jQuery"
+          icon: "/images/integration/jquery.svg"
+    domain: "Magento 2"
+
+  - title: "Generator Parts Store"
+    category: "Web App"
+    year: "2022"
+    description: "Sells battery, wires, and electrical accessories for generators with layered navigation and custom carrier."
+    image: "/images/projects/generator-parts.png"
+    techstack:
+      backend:
+        - name: "Magento 2"
+          icon: "/images/integration/magento.svg"
+        - name: "PHP"
+          icon: "/images/integration/php.svg"
+        - name: "MySQL"
+          icon: "/images/integration/mysql.svg"
+        - name: "Redis"
+          icon: "/images/integration/redis.svg"
+        - name: "Elasticsearch"
+          icon: "/images/integration/elasticsearch.svg"
+      frontend:
+        - name: "HTML"
+          icon: "/images/integration/html.svg"
+        - name: "Knockout.js"
+          icon: "/images/integration/knockout.svg"
+        - name: "LESS"
+          icon: "/images/integration/less.svg"
+        - name: "jQuery"
+          icon: "/images/integration/jquery.svg"
+    domain: "Magento 2"
+
+  - title: "Exhaust Auto Parts Store"
+    category: "Web App"
+    year: "2023"
+    description: "Online store sells exhaust auto parts."
+    image: "/images/projects/exhaust-auto-parts.png"
+    techstack:
+      backend:
+        - name: "Magento 2"
+          icon: "/images/integration/magento.svg"
+        - name: "PHP"
+          icon: "/images/integration/php.svg"
+        - name: "MySQL"
+          icon: "/images/integration/mysql.svg"
+        - name: "Redis"
+          icon: "/images/integration/redis.svg"
+        - name: "Composer"
+          icon: "/images/integration/composer.svg"
+        - name: "Elasticsearch"
+          icon: "/images/integration/elasticsearch.svg"
+      frontend:
+        - name: "HTML"
+          icon: "/images/integration/html.svg"
+        - name: "PHTML"
+          icon: "/images/integration/phtml.svg"
+        - name: "Knockout.js"
+          icon: "/images/integration/knockout.svg"
+        - name: "LESS"
+          icon: "/images/integration/less.svg"
+        - name: "jQuery/JavaScript"
+          icon: "/images/integration/jquery.svg"
+    domain: "Magento 2"
+
+  - title: "Industrial Tools Store"
+    category: "Web App"
+    year: "2023"
+    description: "Online store sells different tools for the industry."
+    image: "/images/projects/industrial-tools.png"
+    techstack:
+      backend:
+        - name: "Magento 2"
+          icon: "/images/integration/magento.svg"
+        - name: "PHP"
+          icon: "/images/integration/php.svg"
+        - name: "MySQL"
+          icon: "/images/integration/mysql.svg"
+        - name: "Redis"
+          icon: "/images/integration/redis.svg"
+        - name: "Composer"
+          icon: "/images/integration/composer.svg"
+        - name: "WordPress"
+          icon: "/images/integration/wordpress.svg"
+      frontend:
+        - name: "HTML"
+          icon: "/images/integration/html.svg"
+        - name: "PHTML"
+          icon: "/images/integration/phtml.svg"
+        - name: "Knockout.js"
+          icon: "/images/integration/knockout.svg"
+        - name: "LESS"
+          icon: "/images/integration/less.svg"
+        - name: "jQuery/JavaScript"
+          icon: "/images/integration/jquery.svg"
+    domain: "Magento 2"
+
+  - title: "Energy-Efficient Lighting Store"
+    category: "Web App"
+    year: "2023"
+    description: "Online store sells energy-efficient lighting products."
+    image: "/images/projects/energy-efficient-lighting.png"
+    techstack:
+      backend:
+        - name: "Magento 2"
+          icon: "/images/integration/magento.svg"
+        - name: "PHP"
+          icon: "/images/integration/php.svg"
+        - name: "MySQL"
+          icon: "/images/integration/mysql.svg"
+        - name: "Redis"
+          icon: "/images/integration/redis.svg"
+        - name: "Composer"
+          icon: "/images/integration/composer.svg"
+        - name: "WordPress"
+          icon: "/images/integration/wordpress.svg"
+      frontend:
+        - name: "HTML"
+          icon: "/images/integration/html.svg"
+        - name: "PHTML"
+          icon: "/images/integration/phtml.svg"
+        - name: "Knockout.js"
+          icon: "/images/integration/knockout.svg"
+        - name: "LESS"
+          icon: "/images/integration/less.svg"
+        - name: "jQuery/JavaScript"
+          icon: "/images/integration/jquery.svg"
+    domain: "Magento 2"
+
+  - title: "Universal Generator Parts Store"
+    category: "Web App"
+    year: "2023"
+    description: "Online store sells universal generator parts products."
+    image: "/images/projects/universal-generator-parts.png"
+    techstack:
+      backend:
+        - name: "Magento 2"
+          icon: "/images/integration/magento.svg"
+        - name: "PHP"
+          icon: "/images/integration/php.svg"
+        - name: "MySQL"
+          icon: "/images/integration/mysql.svg"
+        - name: "Redis"
+          icon: "/images/integration/redis.svg"
+        - name: "Composer"
+          icon: "/images/integration/composer.svg"
+        - name: "WordPress"
+          icon: "/images/integration/wordpress.svg"
+        - name: "Klaviyo"
+          icon: "/images/integration/klaviyo.svg"
+      frontend:
+        - name: "HTML"
+          icon: "/images/integration/html.svg"
+        - name: "PHTML"
+          icon: "/images/integration/phtml.svg"
+        - name: "Knockout.js"
+          icon: "/images/integration/knockout.svg"
+        - name: "LESS"
+          icon: "/images/integration/less.svg"
+        - name: "jQuery/JavaScript"
+          icon: "/images/integration/jquery.svg"
+    domain: "Magento 2"
+
+  - title: "Gold & Silver Coins Store"
+    category: "Web App"
+    year: "2023"
+    description: "Online store sells different coins of gold and silver."
+    image: "/images/projects/gold-silver-coins.png"
+    techstack:
+      backend:
+        - name: "Magento 2"
+          icon: "/images/integration/magento.svg"
+        - name: "PHP"
+          icon: "/images/integration/php.svg"
+        - name: "MySQL"
+          icon: "/images/integration/mysql.svg"
+        - name: "Redis"
+          icon: "/images/integration/redis.svg"
+        - name: "Composer"
+          icon: "/images/integration/composer.svg"
+        - name: "WordPress"
+          icon: "/images/integration/wordpress.svg"
+        - name: "Elasticsearch"
+          icon: "/images/integration/elasticsearch.svg"
+      frontend:
+        - name: "HTML"
+          icon: "/images/integration/html.svg"
+        - name: "PHTML"
+          icon: "/images/integration/phtml.svg"
+        - name: "Knockout.js"
+          icon: "/images/integration/knockout.svg"
+        - name: "LESS"
+          icon: "/images/integration/less.svg"
+        - name: "jQuery/JavaScript"
+          icon: "/images/integration/jquery.svg"
+    domain: "Magento 2"
+
+  - title: "Linens Store"
+    category: "Web App"
+    year: "2023"
+    description: "Online store that sells linens for tables and chairs."
+    image: "/images/projects/linens-store.png"
+    techstack:
+      backend:
+        - name: "Shopify Admin"
+          icon: "/images/integration/shopify.svg"
+        - name: "Shopify Apps"
+          icon: "/images/integration/shopify.svg"
+        - name: "Klaviyo API"
+          icon: "/images/integration/klaviyo.svg"
+      frontend:
+        - name: "Shopify Liquid"
+          icon: "/images/integration/shopify.svg"
+        - name: "HTML5/CSS3"
+          icon: "/images/integration/html.svg"
+        - name: "JavaScript"
+          icon: "/images/integration/js.svg"
+    domain: "Shopify"
+
+  - title: "Packaged Foods Subscription Store"
+    category: "Web App"
+    year: "2023"
+    description: "Online store that sells packaged foods with subscription feature."
+    image: "/images/projects/packaged-foods.png"
+    techstack:
+      backend:
+        - name: "Shopify Admin"
+          icon: "/images/integration/shopify.svg"
+      frontend:
+        - name: "Shopify Liquid"
+          icon: "/images/integration/shopify.svg"
+        - name: "HTML5/CSS3"
+          icon: "/images/integration/html.svg"
+        - name: "JavaScript"
+          icon: "/images/integration/js.svg"
+    domain: "Shopify"
+
+  - title: "Gravestones Store"
+    category: "Web App"
+    year: "2023"
+    description: "Online store that sells gravestones with different sizes and shapes based on the user’s design."
+    image: "/images/projects/gravestones-store.png"
+    techstack:
+      backend:
+        - name: "Shopify Admin"
+          icon: "/images/integration/shopify.svg"
+        - name: "Shopify Apps"
+          icon: "/images/integration/shopify.svg"
+        - name: "Customily App"
+          icon: "/images/integration/customily.svg"
+      frontend:
+        - name: "Shopify Liquid"
+          icon: "/images/integration/shopify.svg"
+        - name: "HTML5/CSS3"
+          icon: "/images/integration/html.svg"
+        - name: "JavaScript"
+          icon: "/images/integration/js.svg"
+        - name: "Customily App Interface"
+          icon: "/images/integration/customily.svg"
+    domain: "Shopify"
+
+  - title: "Furniture Store"
+    category: "Web App"
+    year: "2023"
+    description: "Online Store that sells furnitures used on homes."
+    image: "/images/projects/furniture-store.png"
+    techstack:
+      backend:
+        - name: "Shopify Admin"
+          icon: "/images/integration/shopify.svg"
+      frontend:
+        - name: "Shopify Liquid"
+          icon: "/images/integration/shopify.svg"
+        - name: "HTML/CSS3"
+          icon: "/images/integration/css.svg"
+        - name: "JavaScript"
+          icon: "/images/integration/js.svg"
+    domain: "Shopify"
+
+  - title: "Electrical Appliances Store"
+    category: "Web App"
+    year: "2023"
+    description: "Online store that sells electrical appliances."
+    image: "/images/projects/electrical-appliances.png"
+    techstack:
+      backend:
+        - name: "Shopify Admin"
+          icon: "/images/integration/shopify.svg"
+      frontend:
+        - name: "Shopify Liquid"
+          icon: "/images/integration/shopify.svg"
+        - name: "HTML5/CSS3"
+          icon: "/images/integration/html.svg"
+        - name: "JavaScript"
+          icon: "/images/integration/js.svg"
+    domain: "Shopify"
+
+  - title: "Lamp Shades & Accessories Store"
+    category: "Web App"
+    year: "2023"
+    description: "Online store that sells lamp shades with different styles and design along with accessories like pillows."
+    image: "/images/projects/lamp-shades-store.png"
+    techstack:
+      backend:
+        - name: "Shopify Admin"
+          icon: "/images/integration/shopify.svg"
+      frontend:
+        - name: "Shopify Liquid"
+          icon: "/images/integration/shopify.svg"
+        - name: "HTML5/CSS3"
+          icon: "/images/integration/html.svg"
+        - name: "JavaScript"
+          icon: "/images/integration/js.svg"
+    domain: "Shopify"
+
+  - title: "Clothing Store"
+    category: "Web App"
+    year: "2023"
+    description: "Online store that sells clothing specializing in dresses and sashes."
+    image: "/images/projects/clothing-store.png"
+    techstack:
+      backend:
+        - name: "Shopify Admin"
+          icon: "/images/integration/shopify.svg"
+        - name: "Klaviyo API"
+          icon: "/images/integration/klaviyo.svg"
+      frontend:
+        - name: "Shopify Liquid"
+          icon: "/images/integration/shopify.svg"
+        - name: "HTML5/CSS3"
+          icon: "/images/integration/html.svg"
+        - name: "JavaScript"
+          icon: "/images/integration/js.svg"
+    domain: "Shopify"
+
+  - title: "Podiatrist Availability Booking"
+    category: "Web App"
+    year: "2023"
+    description: "Pull real-time availability of Podiatrists from the Premier platform and display the fetched availability on a user-friendly calendar interface from where site visitors can select available time slots and book appointments directly via the website."
+    image: "/images/projects/podiatrist-booking.png"
+    techstack:
+      backend:
+        - name: "PHP"
+          icon: "/images/integration/php.svg"
+        - name: "CURL"
+          icon: "/images/integration/curl.svg"
+        - name: "Premier API"
+          icon: "/images/integration/prapi.svg"
+        - name: "Twilio API"
+          icon: "/images/integration/twilio.svg"
+        - name: "WordPress"
+          icon: "/images/integration/wordpress.svg"
+        - name: "Calendar Plugin"
+          icon: "/images/integration/calendar.svg"
+      frontend:
+        - name: "HTML"
+          icon: "/images/integration/html.svg"
+        - name: "SCSS"
+          icon: "/images/integration/scss.svg"
+        - name: "JavaScript"
+          icon: "/images/integration/js.svg"
+    domain: "WordPress"
+
+  - title: "Cleaning Services Ecommerce"
+    category: "Web App"
+    year: "2023"
+    description: "Ecommerce website where users can browse and choose from different types of cleaning services offered on the site. Clients earn points based on the purchases they make which can be redeemed for products, services, or other incentives provided by the site."
+    image: "/images/projects/cleaning-services.png"
+    techstack:
+      backend:
+        - name: "PHP"
+          icon: "/images/integration/php.svg"
+        - name: "Loyalty Plugin"
+          icon: "/images/integration/lplugin.svg"
+        - name: "CURL"
+          icon: "/images/integration/curl.svg"
+      frontend:
+        - name: "HTML"
+          icon: "/images/integration/html.svg"
+        - name: "SCSS"
+          icon: "/images/integration/scss.svg"
+        - name: "JavaScript"
+          icon: "/images/integration/js.svg"
+    domain: "WordPress"
+
+  - title: "Energy Options Selector"
+    category: "Web App"
+    year: "2023"
+    description: "Users can choose from various energy options like Electricity Supply, Natural Gas, and Community Solar based on relevant questions to visitors to understand their needs."
+    image: "/images/projects/energy-options.png"
+    techstack:
+      backend:
+        - name: "PHP"
+          icon: "/images/integration/php.svg"
+        - name: "WP Plugin"
+          icon: "/images/integration/wpplugin.svg"
+      frontend:
+        - name: "HTML"
+          icon: "/images/integration/html.svg"
+        - name: "SCSS"
+          icon: "/images/integration/scss.svg"
+        - name: "JavaScript"
+          icon: "/images/integration/js.svg"
+    domain: "WordPress"
+
+  - title: "LMS Platform"
+    category: "Web App"
+    year: "2023"
+    description: "LMS platform supporting both individual users and organizations where learners are organized and managed within groups."
+    image: "/images/projects/lms-platform.png"
+    techstack:
+      backend:
+        - name: "PHP"
+          icon: "/images/integration/php.svg"
+        - name: "LMS system"
+          icon: "/images/integration/lms.svg"
+        - name: "WP Plugin"
+          icon: "/images/integration/wpplugin.svg"
+      frontend:
+        - name: "HTML"
+          icon: "/images/integration/html.svg"
+        - name: "SCSS"
+          icon: "/images/integration/scss.svg"
+        - name: "JavaScript"
+          icon: "/images/integration/js.svg"
+    domain: "WordPress"
+
+  - title: "Event Ticket Selling Site"
+    category: "Web App"
+    year: "2023"
+    description: "Event Ticket selling site where admin can create various events for different locations with location-specific content for sale."
+    image: "/images/projects/event-ticket.png"
+    techstack:
+      backend:
+        - name: "PHP"
+          icon: "/images/integration/php.svg"
+        - name: "LMS system"
+          icon: "/images/integration/lms.svg"
+        - name: "Payment API"
+          icon: "/images/integration/papi.svg"
+        - name: "WP Plugin"
+          icon: "/images/integration/wpplugin.svg"
+      frontend:
+        - name: "HTML"
+          icon: "/images/integration/html.svg"
+        - name: "SCSS"
+          icon: "/images/integration/scss.svg"
+        - name: "JavaScript"
+          icon: "/images/integration/js.svg"
+    domain: "WordPress"
+
+  - title: "Real Estate Management System"
+    category: "Web App"
+    year: "2023"
+    description: "Displays a wide range of residential, commercial, and rental properties from the real estate management system. Advanced search filters based on location, price, property type and showcase images, videos, and virtual tours for better visualization."
+    image: "/images/projects/real-estate.png"
+    techstack:
+      backend:
+        - name: "PHP"
+          icon: "/images/integration/php.svg"
+      frontend:
+        - name: "HTML"
+          icon: "/images/integration/html.svg"
+        - name: "SCSS"
+          icon: "/images/integration/scss.svg"
+        - name: "JavaScript"
+          icon: "/images/integration/js.svg"
+    domain: "WordPress"
+
+  - title: "Housing Communities & Properties"
+    category: "Web App"
+    year: "2023"
+    description: "Displays housing communities and properties from different locations and states. Property data is pulled from multiple external sources, ensuring real-time updates on the website."
+    image: "/images/projects/housing-communities.png"
+    techstack:
+      backend:
+        - name: "PHP"
+          icon: "/images/integration/php.svg"
+        - name: "Community API"
+          icon: "/images/integration/papi.svg"
+      frontend:
+        - name: "HTML"
+          icon: "/images/integration/html.svg"
+        - name: "SCSS"
+          icon: "/images/integration/scss.svg"
+        - name: "JavaScript"
+          icon: "/images/integration/js.svg"
+    domain: "WordPress"
+
+  - title: "AI Task Categorizer"
+    category: "Web App + Machine Learning"
+    description: "Internal tool to automatically classify client tasks from project management tools into specific departments (Development, SEO, Maintenance, Design, etc.) using a hybrid of rules and ML models. Also uses LLMs to generate summary descriptions for internal logs."
+    techstack:
+      backend:
+        - name: "Laravel"
+          icon: "/images/integration/Larvelsvg.svg"
+        - name: "MySQL"
+          icon: "/images/integration/mysql.svg"
+        - name: "Redis"
+          icon: "/images/integration/redis.svg"
+        - name: "Python (scikit-learn)"
+          icon: "/images/integration/python.svg"
+      frontend:
+        - name: "Laravel Blade"
+          icon: "/images/integration/laravel-blade.svg"  # if you want, else omit
+      ml:
+        - name: "OpenAI GPT-4"
+          icon: "/images/integration/chatgpt.svg"
+        - name: "LangChain"
+          icon: "/images/integration/langchain.svg"
+        - name: "BAAI/bge-small embeddings"
+          icon: "/images/integration/embedding.svg"
+
+  - title: "Email Thread Summarizer"
+    category: "Web App + LLM Integration"
+    description: "Tool that reads lengthy email threads between clients and project managers and generates concise summaries. Converts non-technical requests into task-ready briefs using LLMs."
+    techstack:
+      backend:
+        - name: "Laravel"
+          icon: "/images/integration/Larvelsvg.svg"
+        - name: "FastAPI"
+          icon: "/images/integration/fastapi.svg"
+      frontend:
+        - name: "Vue.js"
+          icon: "/images/integration/vue.svg"
+      ml:
+        - name: "OpenAI GPT-4"
+          icon: "/images/integration/chatgpt.svg"
+        - name: "ChromaDB"
+          icon: "/images/integration/chromadb.svg"
+        - name: "Sentence Transformers"
+          icon: "/images/integration/sentence-transformers.svg"
+
+  - title: "Matching Algorithm for Compatibility App"
+    category: "Mobile App + ML"
+    description: "A relationship-focused app that uses regular user responses to calculate emotional alignment between matches using weighted scoring and sentiment analysis."
+    techstack:
+      backend:
+        - name: "Laravel"
+          icon: "/images/integration/Larvelsvg.svg"
+        - name: "MySQL"
+          icon: "/images/integration/mysql.svg"
+        - name: "Python (NLTK, HuggingFace)"
+          icon: "/images/integration/python.svg"
+      app:
+        - name: "Flutter (iOS + Android)"
+          icon: "/images/integration/flutter.svg"
+      ml:
+        - name: "Sentiment Analysis"
+          icon: "/images/integration/sentiment-analysis.svg"
+        - name: "GPT-4 reports"
+          icon: "/images/integration/chatgpt.svg"
+
+  - title: "Internal Wiki Assistant"
+    category: "Web App + LLM Assistant"
+    description: "A smart search assistant inside an internal wiki that uses LLM + embeddings to retrieve the most contextually relevant documentation answers to developer queries."
+    techstack:
+      backend:
+        - name: "FastAPI"
+          icon: "/images/integration/fastapi.svg"
+        - name: "LangChain"
+          icon: "/images/integration/langchain.svg"
+        - name: "Redis"
+          icon: "/images/integration/redis.svg"
+      frontend:
+        - name: "React.js"
+          icon: "/images/integration/react.svg"
+      ml:
+        - name: "OpenAI GPT-4"
+          icon: "/images/integration/chatgpt.svg"
+        - name: "Pinecone for vector search"
+          icon: "/images/integration/pinecone.svg"
+
+  - title: "NLP Pipeline for Client Feedback Analysis"
+    category: "Backend Service + ML"
+    description: "Natural language processing system to analyze client feedback from forms, emails, and reviews. Labels data by sentiment, urgency, and tags to generate monthly trend reports."
+    techstack:
+      backend:
+        - name: "Python (spaCy, scikit-learn)"
+          icon: "/images/integration/python.svg"
+        - name: "PostgreSQL"
+          icon: "/images/integration/postgre.svg"
+      ml:
+        - name: "Custom-trained sentiment model"
+          icon: "/images/integration/sentiment-analysis.svg"
+        - name: "GPT-3.5 fine-tuned"
+          icon: "/images/integration/chatgpt.svg"
+  
+  - title: "HR & Payroll Suite"
+    category: "Web App + Microservices"
+    description: "Full-featured HR system with payroll automation, leave tracking, performance review cycles, and tax compliance. Built using microservice architecture to support scalability across business units."
+    techstack:
+      backend:
+        - name: "Java (Spring Boot)"
+          icon: "/images/integration/springboot.svg"
+        - name: "PostgreSQL"
+          icon: "/images/integration/postgre.svg"
+        - name: "Kafka"
+          icon: "/images/integration/kafka.svg"
+        - name: "Redis"
+          icon: "/images/integration/redis.svg"
+      frontend:
+        - name: "Angular"
+          icon: "/images/integration/angular.svg"
+      platform:
+        - name: "Docker"
+          icon: "/images/integration/docker.svg"
+        - name: "Kubernetes"
+          icon: "/images/integration/kubernetes.svg"
+        - name: "Jenkins CI/CD"
+          icon: "/images/integration/jenkins.svg"
+
+  - title: "Hospital Platform"
+    category: "Web App + IoT Integration"
+    description: "Custom hospital ERP system with modules for patient records, appointment scheduling, diagnostics, billing, pharmacy, and real-time device monitoring from ICU."
+    techstack:
+      backend:
+        - name: "ASP.NET Core"
+          icon: "/images/integration/dotnet.svg"
+        - name: "SQL Server"
+          icon: "/images/integration/sqlsvr.svg"
+        - name: "SignalR"
+          icon: "/images/integration/signalr.svg"
+      frontend:
+        - name: "Vue.js"
+          icon: "/images/integration/vue.svg"
+      iot_devices:
+        - name: "MQTT broker"
+          icon: "/images/integration/mqtt.svg"
+        - name: "HL7 Interfaces"
+          icon: "/images/integration/hl7.svg"
 ---

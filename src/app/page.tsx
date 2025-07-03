@@ -20,8 +20,6 @@ export default function Home() {
         <FeaturesStickyLayout />
         <FeaturesCardLayout />
         <IntegrationSection />
-        {/* <Testimonial featuredCustomer="David Miller" /> */}
-        {/* <CallToAction1 /> */}
       </div>
     </>
   );
