@@ -35,7 +35,7 @@ const Logo = ({
 
   return (
     <Link
-      href="/"
+      href="/systems"
       className={`navbar-brand inline-block${
         !logo || !logo_footer ? " logo-text" : ` `
       }`}
@@ -44,7 +44,7 @@ const Logo = ({
         <>
           {footerLogo ? (
             <ImageFallback
-              src={logo_footer ? logo_footer : src || "/images/logo.svg"}
+              src={logo_footer ? logo_footer : src || "/images/artus-systems.svg"}
               className={`inline-block ${style ? style : ""}`}
               width={parseInt(logo_footer_width.replace("px", "")) * 2}
               height={parseInt(logo_footer_height.replace("px", "")) * 2}

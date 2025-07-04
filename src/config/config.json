@@ -5,10 +5,10 @@
     "base_path": "/",
     "trailing_slash": true,
     "favicon": "/images/favicon.png",
-    "logo": "/images/artus.svg",
+    "logo": "/images/artus-systems.svg",
     "logo_width": "142px",
     "logo_height": "50px",
-    "logo_footer": "/images/artus.svg",
+    "logo_footer": "/images/artus-systems.svg",
     "logo_footer_width": "225px",
     "logo_footer_height": "48px",
     "logo_text": "Artus"

@@ -11,9 +11,9 @@ image:
 buttons:
   - enable: true
     label: "Connect With Us"
-    link: "/contact/"
+    link: "/contact"
   - enable: true
     label: "Artus Team"
-    link: "/about/#team"
+    link: "systems/about/"
 
 

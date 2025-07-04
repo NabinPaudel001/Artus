@@ -67,7 +67,7 @@ export default function CompanySelector() {
             style={{ overflow: "hidden" }}
           >
             {selected !== "consulting" && (
-              <div className="flex flex-col items-center gap-4 pointer-events-none">
+              <div className="flex flex-col items-center pointer-events-none">
                 <Image
                   src="/images/artus-systems-logo.svg"
                   alt="Artus System Logo"
@@ -75,9 +75,6 @@ export default function CompanySelector() {
                   height={150}
                   className="mb-2"
                 />
-                <span className="btn bg-red-800 text-white font-semibold">
-                  Artus Systems
-                </span>
               </div>
             )}
           </motion.div>
@@ -109,7 +106,7 @@ export default function CompanySelector() {
             style={{ overflow: "hidden" }}
           >
             {selected !== "system" && (
-              <div className="flex flex-col items-center gap-4 pointer-events-none">
+              <div className="flex flex-col items-center pointer-events-none">
                 <Image
                   src="/images/artus-consulting.svg"
                   alt="Artus Consulting Logo"
@@ -117,9 +114,6 @@ export default function CompanySelector() {
                   height={150}
                   className="mb-2"
                 />
-                <span className="btn bg-white text-red-600 font-semibold">
-                  Artus Consulting
-                </span>
               </div>
             )}
           </motion.div>

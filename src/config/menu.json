@@ -2,19 +2,41 @@
   "main": [
     {
       "name": "Home",
-      "url": "/"
+      "url": "/systems"
     },
     {
       "name": "About",
-      "url": "/about/"
+      "url": "/systems/about"
     },
     {
-      "name": "Services ",
-      "url": "/services/"
+      "name": "Services",
+      "url": "/systems/services"
     },
     {
-      "name": "Projects ",
-      "url": "/projects/"
+      "name": "Projects",
+      "url": "/systems/projects"
+    }
+  ],
+  "footer": [
+    {
+      "name": "Home",
+      "url": "/systems"
+    },
+    {
+      "name": "About",
+      "url": "/systems/about"
+    },
+    {
+      "name": "Services",
+      "url": "/systems/services"
+    },
+    {
+      "name": "Projects",
+      "url": "/systems/projects"
+    },
+    {
+      "name": "Contact",
+      "url": "/systems/contact"
     }
   ]
 }

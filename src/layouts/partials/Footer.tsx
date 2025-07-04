@@ -2,11 +2,17 @@ import Logo from "@/components/Logo";
 import config from "@/config/config.json";
 import menu from "@/config/menu.json";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 type MenuItem = {
   name: string;
   url?: string;
   children?: { name: string; url?: string }[];
+};
+
+const withSystemsPrefix = (url?: string) => {
+  if (!url) return "#";
+  return url.startsWith("/systems") ? url : `/systems${url}`;
 };
 
 const Footer = () => {
@@ -15,9 +21,14 @@ const Footer = () => {
     main?: MenuItem[];
   };
 
+  const [year, setYear] = useState<string>("");
+
+  useEffect(() => {
+    setYear(new Date().getFullYear().toString());
+  }, []);
+
   const replaceYear = (text: string) => {
-    const year = new Date().getFullYear();
-    return text.replace("{year}", year.toString());
+    return text.replace("{year}", year);
   };
 
   return (
@@ -34,7 +45,7 @@ const Footer = () => {
                 <a
                   key={i}
                   href="#"
-                  className="btn-primary w-10 h-10 flex items-center justify-center rounded-full  transition"
+                  className="btn-primary w-10 h-10 flex items-center justify-center rounded-full transition"
                   aria-label={platform}
                 >
                   <Image
@@ -54,11 +65,9 @@ const Footer = () => {
             <p>Bagmati Province</p>
             <p>Lalitpur District</p>
             <p>Jhamsikhel, Lalitpur 44671</p>
-
             <div className="mt-6">
               <a
-                href="/contact"
-                target="_blank"
+                href={withSystemsPrefix("/contact")}
                 className="inline-block btn-primary px-5 py-2 rounded font-semibold hover:bg-secondary transition"
               >
                 Connect with us
@@ -66,34 +75,32 @@ const Footer = () => {
             </div>
           </div>
         </div>
-{/* Middle Section: Header Nav Links */}
-<div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-y-10 gap-x-6">
-  {main?.map((item, index) => (
-    <div key={index} className="mx-auto text-center">
-      <a
-        href={item.url || "#"}
-        className="block text-white font-semibold hover:text-red-700 hover:underline underline-offset-4 transition mb-3"
-      >
-        {item.name}
-      </a>
-      <ul className="space-y-2">
-        {Array.isArray(item.children) &&
-          item.children.map((child, subIndex) => (
-            <li key={subIndex}>
+
+        {/* Middle Section: Header Nav Links */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-y-10 gap-x-6">
+          {main?.map((item, index) => (
+            <div key={index} className="mx-auto text-center">
               <a
-                href={child.url || "#"}
-                className="inline-block text-white/70 hover:text-primary transition"
+                href={withSystemsPrefix(item.url)}
+                className="block text-white font-semibold hover:text-red-700 hover:underline underline-offset-4 transition mb-3"
               >
-                {child.name}
+                {item.name.trim()}
               </a>
-            </li>
+              <ul className="space-y-2">
+                {item.children?.map((child, subIndex) => (
+                  <li key={subIndex}>
+                    <a
+                      href={withSystemsPrefix(child.url)}
+                      className="inline-block text-white/70 hover:text-primary transition"
+                    >
+                      {child.name.trim()}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
-      </ul>
-    </div>
-  ))}
-</div>
-
-
+        </div>
 
         <hr className="border-white/30 my-5" />
 
@@ -103,8 +110,11 @@ const Footer = () => {
           <ul className="flex flex-wrap justify-center md:justify-start gap-6 font-medium">
             {footer?.map((item, i) => (
               <li key={i}>
-                <a href={item.url} className="hover:text-shadow-red-700 transition">
-                  {item.name}
+                <a
+                  href={withSystemsPrefix(item.url)}
+                  className="hover:text-shadow-red-700 transition"
+                >
+                  {item.name.trim()}
                 </a>
               </li>
             ))}
@@ -112,8 +122,13 @@ const Footer = () => {
 
           {/* Copyright */}
           {config.params?.copyright && (
-            <p className="text-white/60 text-center md:text-right">
-              {replaceYear(config.params.copyright)}
+            <p
+              className="text-white/60 text-center md:text-right"
+              suppressHydrationWarning
+            >
+              {year
+                ? replaceYear(config.params.copyright)
+                : config.params.copyright}
             </p>
           )}
         </div>
