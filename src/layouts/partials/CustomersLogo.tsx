@@ -11,54 +11,51 @@ interface CustomersLogoProps {
   };
 }
 
-
 const CustomersLogo = ({ frontmatter }: CustomersLogoProps) => {
   const { title, list, count } = frontmatter;
 
-useEffect(() => {
-  const animateCounter = (id: string, end: number) => {
-    const el = document.getElementById(id);
-    if (!el) return;
+  useEffect(() => {
+    const animateCounter = (id: string, end: number) => {
+      const el = document.getElementById(id);
+      if (!el) return;
 
-    let current = 0;
-    const step = Math.max(1, Math.floor(end / 200)); // Smaller step = slower count
-    const delay = 25; // Slower step interval in ms
+      let current = 0;
+      const step = Math.max(1, Math.floor(end / 200));
+      const delay = 25;
 
-    const interval = setInterval(() => {
-      current += step;
-      if (current >= end) {
-        current = end;
-        clearInterval(interval);
-      }
-      el.textContent = current.toString();
-    }, delay);
-  };
+      const interval = setInterval(() => {
+        current += step;
+        if (current >= end) {
+          current = end;
+          clearInterval(interval);
+        }
+        el.textContent = current.toString();
+      }, delay);
+    };
 
-  const counter = document.getElementById("counter");
-  const counter2 = document.getElementById("counter2");
+    const counter = document.getElementById("counter");
+    const counter2 = document.getElementById("counter2");
 
-  if (!counter || !counter2) return;
+    if (!counter || !counter2) return;
 
-  let hasAnimated = false;
+    let hasAnimated = false;
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting && !hasAnimated) {
-        hasAnimated = true;
-
-        animateCounter("counter", parseInt(count.toString())); // e.g. 500
-        animateCounter("counter2", 1500); // second counter
-
-        observer.disconnect();
-      }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          hasAnimated = true;
+          animateCounter("counter", parseInt(count.toString()));
+          animateCounter("counter2", 1500);
+          observer.disconnect();
+        }
+      });
     });
-  });
 
-  observer.observe(counter);
-  observer.observe(counter2);
+    observer.observe(counter);
+    observer.observe(counter2);
 
-  return () => observer.disconnect();
-}, [count]);
+    return () => observer.disconnect();
+  }, [count]);
 
   return (
     <section className="section" id="customers-section">
@@ -74,26 +71,26 @@ useEffect(() => {
             </div>
           </div>
           <div
-            className="col-12 pt-14"
+            className="col-12 pt-10"
             data-aos="fade-up-sm"
             data-aos-delay="200"
           >
-            <div className="relative flex gap-x-10 overflow-hidden before:pointer-events-none before:absolute before:left-0 before:z-10 before:h-full before:w-20 before:bg-gradient-to-r before:from-body before:to-transparent before:content-[''] after:pointer-events-none after:absolute after:right-0 after:h-full after:w-20 after:bg-gradient-to-r after:from-transparent after:to-body after:content-[''] md:gap-x-20 before:md:w-40 after:md:w-40">
-              <div className="marquee flex shrink-0 items-center justify-center gap-x-10 gap-y-6 opacity-60 md:gap-x-20">
+            <div className="relative flex gap-x-2 overflow-hidden before:pointer-events-none before:absolute before:left-0 before:z-10 before:h-full before:w-16 before:bg-gradient-to-r before:from-body before:to-transparent after:pointer-events-none after:absolute after:right-0 after:h-full after:w-16 after:bg-gradient-to-r after:from-transparent after:to-body">
+              <div className="marquee flex shrink-0 items-center justify-center gap-x-3 gap-y-4 opacity-80 md:gap-x-2">
                 {list?.map((logo: string, i: number) => (
                   <div className="h-10" key={i}>
                     <ImageFallback
                       src={logo}
                       className="h-full object-contain"
                       alt="brand logo"
-                      width={200}
-                      height={100}
+                      width={160}
+                      height={80}
                     />
                   </div>
                 ))}
               </div>
               <div
-                className="marquee flex shrink-0 items-center justify-center gap-x-10 gap-y-6 opacity-60 md:gap-x-20"
+                className="marquee flex shrink-0 items-center justify-center gap-x-4 gap-y-4 opacity-80 md:gap-x-2"
                 aria-hidden="true"
               >
                 {list?.map((logo: string, i: number) => (
@@ -102,8 +99,8 @@ useEffect(() => {
                       src={logo}
                       className="h-full object-contain"
                       alt="brand logo"
-                      width={200}
-                      height={100}
+                      width={160}
+                      height={80}
                     />
                   </div>
                 ))}

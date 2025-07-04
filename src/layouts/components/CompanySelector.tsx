@@ -6,12 +6,11 @@ import Image from "next/image";
 
 export default function CompanySelector() {
   const [selected, setSelected] = useState<null | "system" | "consulting">(null);
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
-    // Detect screen size
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
     checkMobile();
     window.addEventListener("resize", checkMobile);
@@ -22,29 +21,14 @@ export default function CompanySelector() {
     if (selected) {
       const timeout = setTimeout(() => {
         if (selected === "consulting") {
-          router.push("/contact");
-        } else {
-          setIsVisible(false);
+          router.push("/consulting");
+        } else if (selected === "system") {
+          router.push("/systems");
         }
-      }, 700);
+      }, 200);
       return () => clearTimeout(timeout);
     }
   }, [selected, router]);
-
-  const blinkingText = {
-    blink: {
-      opacity: [1, 0.2, 1],
-      transition: {
-        duration: 1.5,
-        repeat: Infinity,
-        repeatType: "loop" as const,
-      },
-    },
-    solid: {
-      opacity: 1,
-      transition: { duration: 0.3 },
-    },
-  };
 
   return (
     <AnimatePresence>
@@ -83,14 +67,9 @@ export default function CompanySelector() {
             style={{ overflow: "hidden" }}
           >
             {selected !== "consulting" && (
-              <motion.div
-                className="flex flex-col items-center gap-4"
-                style={{ pointerEvents: "none" }}
-                variants={blinkingText}
-                animate={selected === "system" ? "solid" : "blink"}
-              >
+              <div className="flex flex-col items-center gap-4 pointer-events-none">
                 <Image
-                  src="/images/logo.svg"
+                  src="/images/artus-systems-logo.svg"
                   alt="Artus System Logo"
                   width={150}
                   height={150}
@@ -99,13 +78,13 @@ export default function CompanySelector() {
                 <span className="btn bg-red-800 text-white font-semibold">
                   Artus Systems
                 </span>
-              </motion.div>
+              </div>
             )}
           </motion.div>
 
           {/* Artus Consulting */}
           <motion.div
-            className="bg-gradient-to-br from-[#1b1b1b] via-[#7f1d1d] to-[#dc2626] text-white flex flex-col justify-center items-center cursor-pointer w-full md:w-1/2 h-1/2 md:h-full"
+            className="bg-gradient-to-br from-[#5a5a5a] via-[#9b1c1c] to-[#ef4444] text-white flex flex-col justify-center items-center cursor-pointer w-full md:w-1/2 h-1/2 md:h-full"
             onClick={() => setSelected("consulting")}
             initial={{
               x: isMobile ? 0 : 100,
@@ -130,14 +109,9 @@ export default function CompanySelector() {
             style={{ overflow: "hidden" }}
           >
             {selected !== "system" && (
-              <motion.div
-                className="flex flex-col items-center gap-4"
-                style={{ pointerEvents: "none" }}
-                variants={blinkingText}
-                animate={selected === "consulting" ? "solid" : "blink"}
-              >
+              <div className="flex flex-col items-center gap-4 pointer-events-none">
                 <Image
-                  src="/images/artus.svg"
+                  src="/images/artus-consulting.svg"
                   alt="Artus Consulting Logo"
                   width={150}
                   height={150}
@@ -146,7 +120,7 @@ export default function CompanySelector() {
                 <span className="btn bg-white text-red-600 font-semibold">
                   Artus Consulting
                 </span>
-              </motion.div>
+              </div>
             )}
           </motion.div>
         </motion.div>
