@@ -84,7 +84,7 @@ const ProjectCard = ({ data, reverse = false }: ProjectCardProps) => {
         {/* Domain Display */}
         {data.domain && (
           <div className="text-sm font-medium capitalize mt-2">
-            Domain :
+            Category :
             <span
               className="inline-block rounded-full bg-secondary/10 px-3 py-1 text-xs font-medium tracking-wide"
               style={{ color: "#ed3c24" }}

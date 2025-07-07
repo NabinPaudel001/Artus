@@ -812,6 +812,7 @@ list:
           icon: "/images/integration/langchain.svg"
         - name: "BAAI/bge-small embeddings"
           icon: "/images/integration/embedding.svg"
+    domain: "AI & Machine Learning"
 
   - title: "Email Thread Summarizer"
     category: "Web App + LLM Integration"
@@ -832,6 +833,7 @@ list:
           icon: "/images/integration/chromadb.svg"
         - name: "Sentence Transformers"
           icon: "/images/integration/sentence-transformers.svg"
+    domain: "AI & Machine Learning"
 
   - title: "Matching Algorithm for Compatibility App"
     category: "Mobile App + ML"
@@ -852,6 +854,7 @@ list:
           icon: "/images/integration/sentiment-analysis.svg"
         - name: "GPT-4 reports"
           icon: "/images/integration/chatgpt.svg"
+    domain: "AI & Machine Learning"
 
   - title: "Internal Wiki Assistant"
     category: "Web App + LLM Assistant"
@@ -872,7 +875,8 @@ list:
           icon: "/images/integration/chatgpt.svg"
         - name: "Pinecone for vector search"
           icon: "/images/integration/pinecone.svg"
-
+    domain: "AI & Machine Learning"
+      
   - title: "NLP Pipeline for Client Feedback Analysis"
     category: "Backend Service + ML"
     description: "Natural language processing system to analyze client feedback from forms, emails, and reviews. Labels data by sentiment, urgency, and tags to generate monthly trend reports."
@@ -887,7 +891,8 @@ list:
           icon: "/images/integration/sentiment-analysis.svg"
         - name: "GPT-3.5 fine-tuned"
           icon: "/images/integration/chatgpt.svg"
-  
+    domain: "AI & Machine Learning"
+
   - title: "HR & Payroll Suite"
     category: "Web App + Microservices"
     description: "Full-featured HR system with payroll automation, leave tracking, performance review cycles, and tax compliance. Built using microservice architecture to support scalability across business units."
@@ -911,6 +916,7 @@ list:
           icon: "/images/integration/kubernetes.svg"
         - name: "Jenkins CI/CD"
           icon: "/images/integration/jenkins.svg"
+    domain: "AI & Machine Learning"
 
   - title: "Hospital Platform"
     category: "Web App + IoT Integration"
@@ -931,4 +937,5 @@ list:
           icon: "/images/integration/mqtt.svg"
         - name: "HL7 Interfaces"
           icon: "/images/integration/hl7.svg"
+    domain: "AI & Machine Learning" 
 ---

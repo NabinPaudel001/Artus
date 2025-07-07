@@ -36,8 +36,8 @@ contact_form:
   list:
     - icon: "/images/icons/svg/phone.svg"
       title: Give us a call
-      description: +977 985-1077114
+      description: +977 01-5409310/01-5454425
     - icon: "/images/icons/svg/email.svg"
       title: Email
-      description: sudip@artus.com.np
+      description: info@artus.com.np
 ---

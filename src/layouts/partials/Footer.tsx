@@ -16,7 +16,7 @@ const withSystemsPrefix = (url?: string) => {
 };
 
 const Footer = () => {
-  const { footer, main } = menu as {
+  const { main } = menu as {
     footer?: MenuItem[];
     main?: MenuItem[];
   };
@@ -39,7 +39,7 @@ const Footer = () => {
           {/* Left: Logo & Contact */}
           <div className="text-center md:text-left">
             <Logo />
-            <p className="pt-5 text-xl font-semibold mb-4">(+977) 985-1077114</p>
+            <p className="pt-5 text-lg font-semibold mb-4">(+977) 01-5409310/01-5454425</p>
             <div className="flex justify-center md:justify-start gap-4">
               {["facebook", "email", "twitter", "linkedin"].map((platform, i) => (
                 <a
@@ -77,62 +77,53 @@ const Footer = () => {
         </div>
 
         {/* Middle Section: Header Nav Links */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-y-10 gap-x-6">
-          {main?.map((item, index) => (
-            <div key={index} className="mx-auto text-center">
-              <a
-                href={withSystemsPrefix(item.url)}
-                className="block text-white font-semibold hover:text-red-700 hover:underline underline-offset-4 transition mb-3"
-              >
-                {item.name.trim()}
-              </a>
-              <ul className="space-y-2">
-                {item.children?.map((child, subIndex) => (
-                  <li key={subIndex}>
-                    <a
-                      href={withSystemsPrefix(child.url)}
-                      className="inline-block text-white/70 hover:text-primary transition"
-                    >
-                      {child.name.trim()}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+
 
         <hr className="border-white/30 my-5" />
-
-        {/* Bottom Section */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-sm">
-          {/* Footer Menu */}
-          <ul className="flex flex-wrap justify-center md:justify-start gap-6 font-medium">
-            {footer?.map((item, i) => (
-              <li key={i}>
-                <a
-                  href={withSystemsPrefix(item.url)}
-                  className="hover:text-shadow-red-700 transition"
-                >
-                  {item.name.trim()}
-                </a>
-              </li>
-            ))}
-          </ul>
-
-          {/* Copyright */}
-          {config.params?.copyright && (
-            <p
-              className="text-white/60 text-center md:text-right"
-              suppressHydrationWarning
-            >
-              {year
-                ? replaceYear(config.params.copyright)
-                : config.params.copyright}
-            </p>
-          )}
-        </div>
+{/* Bottom Section */}
+<div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-5 mb-3">
+  {/* Nav Grid */}
+  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-8 gap-y-5 gap-x-1 flex-1">
+    {main?.map((item, index) => (
+      <div key={index} className="mx-auto text-center">
+        <a
+          href={withSystemsPrefix(item.url)}
+          className="block text-white font-semibold  transition mb-3"
+        >
+          <span className="hover:text-[#ef4123] hover:underline underline-offset-4">{item.name.trim()}</span>
+        </a>
+        <ul className="space-y-2">
+          {item.children?.map((child, subIndex) => (
+            <li key={subIndex}>
+              <a
+                href={withSystemsPrefix(child.url)}
+                className="inline-block text-white/70 hover:text-primary transition"
+              >
+                {child.name.trim()}
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
+    ))}
+  </div>
+
+  {/* Copyright */}
+  {config.params?.copyright && (
+    <p
+      className="text-white/60 text-right whitespace-nowrap"
+      suppressHydrationWarning
+    >
+      {year
+        ? replaceYear(config.params.copyright)
+        : config.params.copyright}
+    </p>
+  )}
+</div>
+
+
+            
+        </div>
     </footer>
   );
 };
