@@ -8,7 +8,7 @@ const HomeBanner = () => {
     "sections/home-banner.md",
   ).frontmatter;
   return (
-    <section className="mt-8 overflow-hidden pb-0 pt-16 relative">
+    <section className="mt-8 overflow-hidden pb-0 pt-10 relative">
       <div className="container">
         <div className="row justify-center">
           <div className="pt-0 text-center md:col-9 lg:col-9">
@@ -23,7 +23,7 @@ const HomeBanner = () => {
             
 
             {buttons && (
-              <ul className="mt-15 flex flex-wrap justify-center gap-4 mb-2">
+              <ul className="mt-15 flex flex-wrap justify-center gap-4 mb-10">
                 {buttons.map(
                   (
                     { label, link }: { label: string; link: string },

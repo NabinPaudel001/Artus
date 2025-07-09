@@ -32,10 +32,7 @@ const OurProjects = () => {
   return (
     <>
       {/* Header Section */}
-      <section
-        className="section text-white text-center py-28 px-4"
-        data-aos="fade-down"
-      >
+      <section className="section text-white text-center py-28 px-4" data-aos="fade-down">
         <div className="container mx-auto max-w-4xl">
           {title && (
             <h1
@@ -62,7 +59,6 @@ const OurProjects = () => {
                 data-aos="fade-up"
                 data-aos-delay={index * 30}
                 data-aos-duration="600"
-                className="transition-all duration-1000 ease-out transform opacity-0 translate-y-6 aos-animate:opacity-100 aos-animate:translate-y-0"
               >
                 <ProjectCard
                   data={project}

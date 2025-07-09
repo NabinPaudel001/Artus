@@ -33,12 +33,16 @@ const ProjectCard = ({ data, reverse = false }: ProjectCardProps) => {
     >
       {/* Image Section */}
       <div className="w-full max-w-[320px] mx-auto aspect-square lg:max-w-none lg:w-[35%] lg:h-auto relative">
-        <img
-          src={data.image}
-          alt={data.title}
-          className="absolute inset-0 w-full h-full object-cover rounded-t-2xl lg:rounded-tr-none lg:rounded-l-2xl"
-        />
-      </div>
+  <Image
+    src={data.image}
+    alt={data.title}
+    fill
+    className="absolute inset-0 w-full h-full object-cover rounded-2xl"
+    sizes="(max-width: 1024px) 100vw, 35vw"
+    priority
+  />
+</div>
+
 
       {/* Content Section */}
       <div className="lg:w-[65%] w-full p-6 pr-10 pl-10 flex flex-col justify-center">
@@ -83,14 +87,16 @@ const ProjectCard = ({ data, reverse = false }: ProjectCardProps) => {
 
         {/* Domain Display */}
         {data.domain && (
-          <div className="text-sm font-medium capitalize mt-2">
-            Category :
-            <span
-              className="inline-block rounded-full bg-secondary/10 px-3 py-1 text-xs font-medium tracking-wide"
-              style={{ color: "#ed3c24" }}
-            >
-              {data.domain}
-            </span>
+          <div className="text-md font-medium capitalize mt-2">
+            Category : &nbsp;
+         <span
+  className="inline-block text-sm font-medium tracking-wide text-[#ef4123]"
+  style={{
+    textShadow: '0 0 6px #ef4123, 0 0 6px #ef4123',
+  }}
+>
+  {data.domain}
+</span>
           </div>
         )}
       </div>

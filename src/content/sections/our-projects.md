@@ -792,6 +792,7 @@ list:
   - title: "AI Task Categorizer"
     category: "Web App + Machine Learning"
     description: "Internal tool to automatically classify client tasks from project management tools into specific departments (Development, SEO, Maintenance, Design, etc.) using a hybrid of rules and ML models. Also uses LLMs to generate summary descriptions for internal logs."
+    image: "/images/projects/ai-tool.png"
     techstack:
       backend:
         - name: "Laravel"
@@ -817,6 +818,7 @@ list:
   - title: "Email Thread Summarizer"
     category: "Web App + LLM Integration"
     description: "Tool that reads lengthy email threads between clients and project managers and generates concise summaries. Converts non-technical requests into task-ready briefs using LLMs."
+    image: "/images/projects/email-ai.png"
     techstack:
       backend:
         - name: "Laravel"
@@ -838,6 +840,7 @@ list:
   - title: "Matching Algorithm for Compatibility App"
     category: "Mobile App + ML"
     description: "A relationship-focused app that uses regular user responses to calculate emotional alignment between matches using weighted scoring and sentiment analysis."
+    image: "/images/projects/comaptibility-ai.png"
     techstack:
       backend:
         - name: "Laravel"
@@ -859,6 +862,7 @@ list:
   - title: "Internal Wiki Assistant"
     category: "Web App + LLM Assistant"
     description: "A smart search assistant inside an internal wiki that uses LLM + embeddings to retrieve the most contextually relevant documentation answers to developer queries."
+    image: "/images/projects/wiki-ai.png"
     techstack:
       backend:
         - name: "FastAPI"
@@ -880,6 +884,7 @@ list:
   - title: "NLP Pipeline for Client Feedback Analysis"
     category: "Backend Service + ML"
     description: "Natural language processing system to analyze client feedback from forms, emails, and reviews. Labels data by sentiment, urgency, and tags to generate monthly trend reports."
+    image: "/images/projects/npl-ai.png"
     techstack:
       backend:
         - name: "Python (spaCy, scikit-learn)"
@@ -896,6 +901,7 @@ list:
   - title: "HR & Payroll Suite"
     category: "Web App + Microservices"
     description: "Full-featured HR system with payroll automation, leave tracking, performance review cycles, and tax compliance. Built using microservice architecture to support scalability across business units."
+    image: "/images/projects/hr-ai.png"
     techstack:
       backend:
         - name: "Java (Spring Boot)"
@@ -921,6 +927,7 @@ list:
   - title: "Hospital Platform"
     category: "Web App + IoT Integration"
     description: "Custom hospital ERP system with modules for patient records, appointment scheduling, diagnostics, billing, pharmacy, and real-time device monitoring from ICU."
+    image: "/images/projects/hospital-ai.png"
     techstack:
       backend:
         - name: "ASP.NET Core"
