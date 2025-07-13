@@ -2,13 +2,10 @@
 
 import React, { useState } from "react";
 import ImageFallback from "@/helpers/ImageFallback";
-import { RegularPage } from "@/types";
 
-type ContactFormSectionProps = {
-  contact_form: RegularPage["frontmatter"]["contact_form"];
-};
 
-const ContactFormSection = ({ }: ContactFormSectionProps) => {
+// No props needed for ContactFormSection
+const ContactFormSection = () => {
   // Your form state and handlers here (same as before)
   const [formData, setFormData] = useState({
     name: "",

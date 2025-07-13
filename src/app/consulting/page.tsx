@@ -40,7 +40,7 @@ export default function ConsultingPage() {
   <ServicesSection />
   <ClientsSection />
   <TeamSection />
-  <ContactSection />
+ <ContactSection />
   <Footer />
 
       {/* Animations */}
