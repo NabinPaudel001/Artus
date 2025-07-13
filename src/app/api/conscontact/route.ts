@@ -116,7 +116,7 @@ Intro: ${intro || "N/A"}
       `;
 
       await transporter.sendMail({
-        from: `"Contact Form Application" <${process.env.GMAIL_USER}>`,
+        from: `"Contact Form Application  " <${process.env.GMAIL_USER}>`,
         to: "nabin.211523@ncit.edu.np",
         subject: "New Job Application",
         text,
