@@ -1,83 +1,117 @@
-import config from "@/config/config.json";
+"use client"; // mark as client component since it uses React hooks
+
+import React, { useState } from "react";
 import ImageFallback from "@/helpers/ImageFallback";
-import { getListPage } from "@/lib/contentParser";
-import { markdownify } from "@/lib/utils/textConverter";
 import { RegularPage } from "@/types";
 
-const ContactFormSection = () => {
-  const { contact_form_action } = config.params;
-  const {
-    contact_form,
-  }: { contact_form: RegularPage["frontmatter"]["contact_form"] } =
-    getListPage("contact/_index.md").frontmatter;
+type ContactFormSectionProps = {
+  contact_form: RegularPage["frontmatter"]["contact_form"];
+};
+
+const ContactFormSection = ({ }: ContactFormSectionProps) => {
+  // Your form state and handlers here (same as before)
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    service: "Application",
+    budget: "under100k",
+    message: "",
+  });
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus("loading");
+    setErrorMessage("");
+
+    try {
+      const res = await fetch("/api/syscontact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        setStatus("success");
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          service: "Application",
+          budget: "under100k",
+          message: "",
+        });
+      } else {
+        setStatus("error");
+        setErrorMessage(data.message || "Failed to send message.");
+      }
+    } catch {
+      setStatus("error");
+      setErrorMessage("Network error. Please try again.");
+    }
+  };
 
   return (
     <section className="section">
       <div className="container relative">
         <div className="row gy-5 items-start" data-aos="fade-left-sm">
           {/* Left Column: Title and Contact Info */}
-          <div className="lg:col-5">
-            {contact_form?.title && (
-              <h2
-                className="has-gradient mb-8"
-                dangerouslySetInnerHTML={markdownify(contact_form.title)}
-              />
-            )}
+        <div className="lg:col-5">
+  <h2 className="has-gradient mb-8">Get in touch with any<br />general query.</h2>
 
-            {contact_form?.list && (
-              <div className="flex flex-col gap-6 md:gap-8">
-                {contact_form.list.map(
-                  (
-                    point: {
-                      icon: string;
-                      title: string;
-                      description: string;
-                    },
-                    i: number,
-                  ) => (
-                    <div key={i} className="flex gap-4">
-                      {point.icon && (
-                        <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-gradient-to-b from-white/10 to-slate-800/25">
-                          <ImageFallback
-                            className="h-5 w-5"
-                            src={point.icon}
-                            alt={`icon related to ${point.title}`}
-                            width={28}
-                            height={28}
-                          />
-                        </div>
-                      )}
-                      <div>
-                        {point.title && (
-                          <h3
-                            className="tracking-none mb-2 text-lg/none"
-                            dangerouslySetInnerHTML={markdownify(point.title)}
-                          />
-                        )}
-                        {point.description && (
-                          <p
-                            className="text-lg/none opacity-70"
-                            dangerouslySetInnerHTML={markdownify(
-                              point.description,
-                            )}
-                          />
-                        )}
-                      </div>
-                    </div>
-                  ),
-                )}
-              </div>
-            )}
-          </div>
+  <div className="flex flex-col gap-6 md:gap-8">
+    {/* First contact item: Give us a call */}
+    <div className="flex gap-4 items-center">
+      <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-gradient-to-b from-white/10 to-slate-800/25">
+        {/* Replace with actual icon URL or component */}
+        <ImageFallback
+          className="h-5 w-5"
+          src="/images/icons/svg/phone.svg"
+          alt="icon related to Give us a call"
+          width={28}
+          height={28}
+        />
+      </div>
+      <div>
+        <h3 className="tracking-none mb-2 text-lg/none">Give us a call</h3>
+        <p className="text-lg/none opacity-70">+977 01-5409310/01-5454425</p>
+      </div>
+    </div>
+
+    {/* Second contact item: Email */}
+    <div className="flex gap-4 items-center">
+      <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-gradient-to-b from-white/10 to-slate-800/25">
+        {/* Replace with actual icon URL or component */}
+        <ImageFallback
+          className="h-5 w-5"
+          src="/images/icons/svg/email.svg"
+          alt="icon related to Email"
+          width={28}
+          height={28}
+        />
+      </div>
+      <div>
+        <h3 className="tracking-none mb-2 text-lg/none">Email</h3>
+        <a className="text-lg/none opacity-70" href="mailto:info@artus.com.np">info@artus.com.np</a>
+      </div>
+    </div>
+  </div>
+</div>
 
           {/* Right Column: Contact Form */}
           <div className="lg:col-7 lg:ps-16" data-aos-delay="200">
             <div className="rounded-2xl border border-white/5 bg-dark p-5 md:p-16">
-              <form
-                className="grid grid-cols-1 gap-6"
-                action={contact_form_action}
-                method="post"
-              >
+              <form className="grid grid-cols-1 gap-6" onSubmit={handleSubmit} noValidate>
                 <div>
                   <label htmlFor="name" className="form-label">
                     Your Name <span className="text-red-500">*</span>
@@ -89,6 +123,8 @@ const ContactFormSection = () => {
                     required
                     type="text"
                     placeholder="YOUR NAME*"
+                    value={formData.name}
+                    onChange={handleChange}
                   />
                 </div>
 
@@ -103,6 +139,8 @@ const ContactFormSection = () => {
                     required
                     type="email"
                     placeholder="YOUR EMAIL*"
+                    value={formData.email}
+                    onChange={handleChange}
                   />
                 </div>
 
@@ -116,6 +154,8 @@ const ContactFormSection = () => {
                     className="form-input w-full"
                     type="text"
                     placeholder="COMPANY NAME"
+                    value={formData.company}
+                    onChange={handleChange}
                   />
                 </div>
 
@@ -128,11 +168,13 @@ const ContactFormSection = () => {
                     name="service"
                     className="form-input w-full bg-dark text-white dark:bg-dark dark:text-white border border-white/10"
                     required
+                    value={formData.service}
+                    onChange={handleChange}
                   >
-                    <option className="bg-dark text-white dark:bg-dark dark:text-white border border-white/10" value="Application">APPLICATION DESIGN</option>
-                    <option className="bg-dark text-white dark:bg-dark dark:text-white border border-white/10" value="web">Web Development</option>
-                    <option className="bg-dark text-white dark:bg-dark dark:text-white border border-white/10" value="mobile">Mobile App Development</option>
-                    <option className="bg-dark text-white dark:bg-dark dark:text-white border border-white/10" value="uiux">UI/UX Design</option>
+                    <option value="Application" className="w-full bg-dark text-white dark:bg-dark dark:text-white border border-white/10">APPLICATION DESIGN</option>
+                    <option value="web" className="w-full bg-dark text-white dark:bg-dark dark:text-white border border-white/10 uppercase">Web Development</option>
+                    <option value="mobile" className="w-full bg-dark text-white dark:bg-dark dark:text-white border border-white/10 uppercase">Mobile App Development</option>
+                    <option value="uiux" className="w-full bg-dark text-white dark:bg-dark dark:text-white border border-white/10 uppercase">UI/UX Design</option>
                   </select>
                 </div>
 
@@ -146,10 +188,12 @@ const ContactFormSection = () => {
                     name="budget"
                     className="form-input w-full"
                     required
+                    value={formData.budget}
+                    onChange={handleChange}
                   >
-                    <option className="bg-dark text-white dark:bg-dark dark:text-white border border-white/10" value="under100k">Under 100k</option>
-                    <option className="bg-dark text-white dark:bg-dark dark:text-white border border-white/10" value="under500k">Under 500K</option>
-                    <option className="bg-dark text-white dark:bg-dark dark:text-white border border-white/10" value="500kplus">500K+</option>
+                    <option value="under100k" className="w-full bg-dark text-white dark:bg-dark dark:text-white border border-white/10">Under 100k</option>
+                    <option value="under500k" className="w-full bg-dark text-white dark:bg-dark dark:text-white border border-white/10">Under 500K</option>
+                    <option value="500kplus" className="w-full bg-dark text-white dark:bg-dark dark:text-white border border-white/10">500K+</option>
                   </select>
                 </div>
 
@@ -163,6 +207,8 @@ const ContactFormSection = () => {
                     className="form-input w-full"
                     rows={4}
                     placeholder="WRITE HERE"
+                    value={formData.message}
+                    onChange={handleChange}
                   />
                 </div>
 
@@ -170,12 +216,24 @@ const ContactFormSection = () => {
                   <button
                     type="submit"
                     className="btn btn-primary rounded-full border-border text-white"
+                    disabled={status === "loading"}
                   >
                     <span className="value">
-                      <span data-content="Send Message">Send Message</span>
+                      <span data-content="Send Message">
+                        {status === "loading" ? "Sending..." : "Send Message"}
+                      </span>
                     </span>
                   </button>
                 </div>
+
+                {status === "error" && (
+                  <p className="mt-2 text-sm text-red-500">{errorMessage}</p>
+                )}
+                {status === "success" && (
+                  <p className="mt-2 text-sm text-green-500">
+                    Message sent successfully.
+                  </p>
+                )}
               </form>
             </div>
           </div>

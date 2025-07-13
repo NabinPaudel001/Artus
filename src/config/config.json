@@ -35,7 +35,7 @@
   "navigation_button": {
     "enable": true,
     "label": "Contact Us",
-    "link": "/contact/"
+    "link": "/systems/contact/"
   },
 
   "google_tag_manager": {
