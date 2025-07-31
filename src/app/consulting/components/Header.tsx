@@ -30,7 +30,7 @@ const Header = () => {
         />
       </Link>
       <nav className="hidden md:flex space-x-8 font-semibold text-sm tracking-wide text-[#444]">
-        {['About', 'Services', 'Clients', 'Team', 'Contact'].map((text) => (
+        {['About', 'Services', 'Clients', 'Founders', 'Contact'].map((text) => (
           <Link
             key={text}
             href={`#${text.toLowerCase()}`}
@@ -60,7 +60,7 @@ const Header = () => {
       {mobileMenuOpen && (
         <div className="absolute top-full mt-3 w-full bg-white shadow-lg rounded-xl px-6 py-4 md:hidden">
           <ul className="flex flex-col space-y-4 text-base font-medium text-gray-700">
-            {['About', 'Services', 'Clients', 'Team', 'Contact'].map((text) => (
+            {['About', 'Services', 'Clients', 'Founders', 'Contact'].map((text) => (
               <li key={text}>
                 <Link
                   href={`#${text.toLowerCase()}`}

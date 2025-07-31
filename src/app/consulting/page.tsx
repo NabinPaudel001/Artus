@@ -9,39 +9,37 @@ import TeamSection from "./components/TeamSection";
 import ContactSection from "./components/ContactPage";
 import Footer from "./components/Footer";
 
-
 export default function ConsultingPage() {
-  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
-
 
   return (
-    <main className="relative min-h-screen overflow-x-hidden bg-gradient-to-br from-[#fdfbfb] via-[#ebedee] to-[#dfe9f3] text-[#1a1a1a] font-sans select-none">
+    <main className="relative min-h-screen overflow-x-hidden bg-[#f9dfde] font-sans select-none">
       {/* Animated Blobs */}
       <div className="fixed inset-0 -z-20">
-      <motion.div
-        animate={{ x: [0, 20, -20, 0], y: [0, -30, 30, 0], scale: [1, 1.1, 0.9, 1] }}
-        transition={{ repeat: Infinity, duration: 10, ease: "easeInOut" }}
-        className="absolute top-10 left-10 w-96 h-96 rounded-full bg-pink-300 blur-[100px] opacity-50"
-      />
-      <motion.div
-        animate={{ x: [0, -15, 15, 0], y: [0, 25, -25, 0], scale: [1, 1.05, 0.95, 1] }}
-        transition={{ repeat: Infinity, duration: 9, ease: "easeInOut" }}
-        className="absolute top-1/2 right-10 w-80 h-80 rounded-full bg-red-200 blur-[80px] opacity-40"
-      />
-      <motion.div
-        animate={{ x: [0, 10, -10, 0], y: [0, 15, -15, 0], scale: [1, 0.95, 1.05, 1] }}
-        transition={{ repeat: Infinity, duration: 11, ease: "easeInOut" }}
-        className="absolute bottom-10 left-1/3 w-72 h-72 rounded-full bg-red-300 blur-[90px] opacity-50"
-      />
-    </div>
-  <Header />
-  <Hero isMobile={isMobile} />
-  <AboutSection />
-  <ServicesSection />
-  <ClientsSection />
-  <TeamSection />
- <ContactSection />
-  <Footer />
+        <motion.div
+          animate={{ x: [0, 20, -20, 0], y: [0, -30, 30, 0], scale: [1, 1.1, 0.9, 1] }}
+          transition={{ repeat: Infinity, duration: 10, ease: "easeInOut" }}
+          className="absolute top-10 left-10 w-96 h-96 rounded-full bg-pink-300 blur-[100px] opacity-50"
+        />
+        <motion.div
+          animate={{ x: [0, -15, 15, 0], y: [0, 25, -25, 0], scale: [1, 1.05, 0.95, 1] }}
+          transition={{ repeat: Infinity, duration: 9, ease: "easeInOut" }}
+          className="absolute top-1/2 right-10 w-80 h-80 rounded-full bg-red-200 blur-[80px] opacity-40"
+        />
+        <motion.div
+          animate={{ x: [0, 10, -10, 0], y: [0, 15, -15, 0], scale: [1, 0.95, 1.05, 1] }}
+          transition={{ repeat: Infinity, duration: 11, ease: "easeInOut" }}
+          className="absolute bottom-10 left-1/3 w-72 h-72 rounded-full bg-red-300 blur-[90px] opacity-50"
+        />
+      </div>
+
+      <Header />
+      <Hero />
+      <AboutSection />
+      <ServicesSection />
+      <ClientsSection />
+      <TeamSection />
+      <ContactSection />
+      <Footer />
 
       {/* Animations */}
       <style>{`

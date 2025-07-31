@@ -52,37 +52,37 @@ export async function POST(request: Request) {
         pass: process.env.GMAIL_APP_PASSWORD,
       },
     });
+if (type === "company") {
+  const { company, name, email, phone, position, designation, description } = fields;
 
-    if (type === "company") {
-      const { company, name, email, phone, position, description } = fields;
+  if (!name || !email) {
+    return NextResponse.json(
+      { success: false, message: "Name and email are required." },
+      { status: 400 }
+    );
+  }
 
-      if (!name || !email) {
-        return NextResponse.json(
-          { success: false, message: "Name and email are required." },
-          { status: 400 }
-        );
-      }
-
-      const text = `
+  const text = `
 New Hiring Request:
 
 Name: ${name}
 Email: ${email}
 Phone: ${phone || "N/A"}
 Company: ${company || "N/A"}
+Designation: ${designation || "N/A"}
 Position: ${position || "N/A"}
 Description: ${description || "N/A"}
-      `;
+  `;
 
-      await transporter.sendMail({
-        from: `"Contact Form Submission" <${process.env.GMAIL_USER}>`,
-        to: "nabin.211523@ncit.edu.np",
-        subject: "New Hiring Request",
-        text,
-      });
+  await transporter.sendMail({
+    from: `"Contact Form Submission" <${process.env.GMAIL_USER}>`,
+    to: "jwolit@artus.com.np",
+    subject: "New Hiring Request",
+    text,
+  });
 
-      return NextResponse.json({ success: true, message: "Request sent successfully." });
-    }
+  return NextResponse.json({ success: true, message: "Request sent successfully." });
+}
 
     if (type === "jobseeker") {
       const { fullName, desiredPosition, email, phone, experienceLevel, intro } = fields;
@@ -117,7 +117,7 @@ Intro: ${intro || "N/A"}
 
       await transporter.sendMail({
         from: `"Contact Form Application  " <${process.env.GMAIL_USER}>`,
-        to: "nabin.211523@ncit.edu.np",
+        to: "jwolit@artus.com.np",
         subject: "New Job Application",
         text,
         attachments,

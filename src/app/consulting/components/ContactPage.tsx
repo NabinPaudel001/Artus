@@ -10,6 +10,7 @@ export default function ContactSection() {
     email: "",
     phone: "",
     position: "",
+    designation: "",
     description: "",
   });
   const [companyStatus, setCompanyStatus] = useState<
@@ -70,13 +71,13 @@ export default function ContactSection() {
       const data = await res.json();
 
       if (res.ok) {
-        setCompanyStatus("success");
         setCompanyForm({
           company: "",
           name: "",
           email: "",
           phone: "",
           position: "",
+          designation: "",
           description: "",
         });
       } else {
@@ -140,91 +141,106 @@ export default function ContactSection() {
   return (
     <section id="contact" className="py-28 text-center px-4 bg-white">
       <div className="max-w-6xl mx-auto">
-        <h3 className="text-4xl font-bold mb-4 text-[#333]">Get In Touch</h3>
+        <h3 className="text-4xl sm:text-5xl font-bold mb-6 text-[#ef4123] tracking-tight">Get In Touch</h3>
         <p className="text-gray-600 mb-12 max-w-xl mx-auto">
-          Ready to find the perfect talent or your next career opportunity? We are here to help.
+       Ready to find the perfect Talent for your Organization or looking for better Career
+Opportunities. We are here to help.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-left">
-          {/* For Companies */}
-          <div className="bg-white border rounded-2xl p-8 shadow-md">
-            <h4 className="text-lg font-semibold text-red-600 mb-2 tracking-wide">
-              For Companies
-            </h4>
-            <p className="text-gray-500 mb-6 text-sm">Find the right talent for your organization</p>
-            <form className="space-y-4" onSubmit={submitCompanyForm} noValidate>
-              <div className="grid grid-cols-2 gap-4">
-                <input
-                  type="text"
-                  placeholder="Your Company"
-                  className="input-field"
-                  name="company"
-                  value={companyForm.company}
-                  onChange={handleCompanyChange}
-                  required
-                />
-                <input
-                  type="text"
-                  placeholder="Your Name"
-                  className="input-field"
-                  name="name"
-                  value={companyForm.name}
-                  onChange={handleCompanyChange}
-                  required
-                />
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <input
-                  type="email"
-                  placeholder="company@example.com"
-                  className="input-field"
-                  name="email"
-                  value={companyForm.email}
-                  onChange={handleCompanyChange}
-                  required
-                />
-                <input
-                  type="text"
-                  placeholder="+977-XXX-XXXX"
-                  className="input-field"
-                  name="phone"
-                  value={companyForm.phone}
-                  onChange={handleCompanyChange}
-                />
-              </div>
-              <input
-                type="text"
-                placeholder="e.g. Senior Software Engineer"
-                className="input-field"
-                name="position"
-                value={companyForm.position}
-                onChange={handleCompanyChange}
-              />
-              <textarea
-                placeholder="Describe your hiring needs, experience level, skills required, etc."
-                className="input-field"
-                name="description"
-                value={companyForm.description}
-                onChange={handleCompanyChange}
-              />
-              <SubmitButton
-                text={companyStatus === "loading" ? "Sending..." : "Submit Hiring Request"}
-              />
-              {companyStatus === "error" && (
-                <p className="mt-2 text-sm text-red-500">{companyError}</p>
-              )}
-              {companyStatus === "success" && (
-                <p className="mt-2 text-sm text-green-500">Request sent successfully!</p>
-              )}
-            </form>
-          </div>
+         {/* For Companies */}
+<div className="bg-white border rounded-2xl p-8 shadow-md">
+  <h4 className="text-lg font-semibold text-red-600 mb-2 tracking-wide">
+    For Companies
+  </h4>
+  <p className="text-gray-500 mb-6 text-sm">Request for Service and we will get back to you soon.</p>
+  <form className="space-y-4" onSubmit={submitCompanyForm} noValidate>
+    {/* Company Name - full width */}
+    <input
+      type="text"
+      placeholder="Company Name"
+      className="input-field w-full"
+      name="company"
+      value={companyForm.company}
+      onChange={handleCompanyChange}
+      required
+    />
+
+    {/* Full Name and Designation side by side */}
+    <div className="grid grid-cols-2 gap-4">
+      <input
+        type="text"
+        placeholder="Your Full Name"
+        className="input-field w-full"
+        name="name"
+        value={companyForm.name}
+        onChange={handleCompanyChange}
+        required
+      />
+      <input
+        type="text"
+        placeholder="Designation"
+        className="input-field w-full"
+        name="designation"
+        value={companyForm.designation || ""}
+        onChange={handleCompanyChange}
+      />
+    </div>
+
+    {/* Rest of inputs remain unchanged */}
+    <div className="grid grid-cols-2 gap-4">
+      <input
+        type="email"
+        placeholder="Email"
+        className="input-field"
+        name="email"
+        value={companyForm.email}
+        onChange={handleCompanyChange}
+        required
+      />
+      <input
+        type="text"
+        placeholder="Phone Number"
+        className="input-field"
+        name="phone"
+        value={companyForm.phone}
+        onChange={handleCompanyChange}
+      />
+    </div>
+    <input
+      type="text"
+      placeholder="Vacant Position e.g. Accounts Manager"
+      className="input-field"
+      name="position"
+      value={companyForm.position}
+      onChange={handleCompanyChange}
+    />
+<textarea
+  placeholder="Briefly explain your needs"
+  className="input-field h-35 "  // taller textarea + no resize handle
+  name="description"
+  value={companyForm.description}
+  onChange={handleCompanyChange}
+/>
+    <SubmitButton
+      text={companyStatus === "loading" ? "Sending..." : "Ask for Proposal"}
+    />
+    {companyStatus === "error" && (
+      <p className="mt-2 text-sm text-red-500">{companyError}</p>
+    )}
+    {companyStatus === "success" && (
+      <p className="mt-2 text-sm text-green-500">Request sent successfully!</p>
+    )}
+  </form>
+</div>
+
 
           {/* For Job Seekers */}
           <div className="bg-[#f8faff] border rounded-2xl p-8 shadow-md">
             <h4 className="text-lg font-semibold text-red-600 mb-2 tracking-wide">
               For Job Seekers
             </h4>
-            <p className="text-gray-500 mb-6 text-sm">Submit your CV and find your next opportunity</p>
+            <p className="text-gray-500 mb-6 text-sm">Submit your CV and you will hear from us soon</p>
             <form className="space-y-4" onSubmit={submitJobSeekerForm} noValidate>
               <div className="grid grid-cols-2 gap-4">
                 <input
@@ -238,7 +254,7 @@ export default function ContactSection() {
                 />
                 <input
                   type="text"
-                  placeholder="e.g. Marketing Manager"
+                  placeholder="Current Role"
                   className="input-field"
                   name="desiredPosition"
                   value={jobSeekerForm.desiredPosition}
@@ -248,7 +264,7 @@ export default function ContactSection() {
               <div className="grid grid-cols-2 gap-4">
                 <input
                   type="email"
-                  placeholder="your.email@example.com"
+                  placeholder="Email"
                   className="input-field"
                   name="email"
                   value={jobSeekerForm.email}
@@ -257,7 +273,7 @@ export default function ContactSection() {
                 />
                 <input
                   type="text"
-                  placeholder="+977-XXX-XXXX"
+                  placeholder="Phone Number"
                   className="input-field"
                   name="phone"
                   value={jobSeekerForm.phone}
@@ -271,10 +287,12 @@ export default function ContactSection() {
                 value={jobSeekerForm.experienceLevel}
                 onChange={handleJobSeekerChange}
               >
-                <option value="">Select Experience Level</option>
+                <option value="">Total Years of Experience</option>
                 <option value="0-2 years">0-2 years</option>
                 <option value="2-5 years">2-5 years</option>
                 <option value="5+ years">5+ years</option>
+                <option value="10+ years">10+ years</option>
+                <option value="15+ years">15+ years</option>
               </select>
               <div className="border-dashed border-2 border-gray-300 rounded-md p-6 text-center">
                 <p className="mb-2 text-gray-500">
@@ -294,7 +312,7 @@ export default function ContactSection() {
                 />
               </div>
               <textarea
-                placeholder="Brief introduction about yourself and career goals..."
+                placeholder="Briefly explain your Profile and the Career you are exploring"
                 className="input-field"
                 name="intro"
                 value={jobSeekerForm.intro}

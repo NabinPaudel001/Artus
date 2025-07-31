@@ -50,8 +50,8 @@ const transporter = nodemailer.createTransport({
     `;
 
     await transporter.sendMail({
-      from: `"SYSTEM Contact" <paudelnabin41@gmail.com>`,
-      to: "nabin.211523@ncit.edu.np", // or any destination email
+      from: `"SYSTEM Contact" <admin@artus.com.np>`,
+      to: "sudip@artus.com.np", // or any destination email
       subject: "New Contact Form Submission - SYSTEM",
       text: mailText,
     });

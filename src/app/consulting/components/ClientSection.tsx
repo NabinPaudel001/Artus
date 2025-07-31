@@ -5,44 +5,65 @@ import { useEffect, useRef } from "react";
 
   const clients = [
     {
-      name: "Nepal Rastra Bank",
-      sector: "Financial Institution",
-      icon: "/images/clients/nrb.svg",
+      name: "Ace Institute",
+      icon: "/images/clients/ace.svg",
     },
     {
-      name: "Himalayan Bank",
-      sector: "Commercial Bank",
-      icon: "/images/clients/hbl.svg",
+      name: "Asian Paints Nepal",
+      icon: "/images/clients/asian_paints_logo.png",
     },
     {
-      name: "Nepal Telecom",
-      sector: "Telecommunications",
-      icon: "/images/clients/ntc.svg",
+      name: "Avani Advertising",
+      icon: "/images/clients/Avani_advertising.jpg",
     },
     {
-      name: "Tribhuvan University",
-      sector: "Education",
-      icon: "/images/clients/tribhuvan-university.svg",
+      name: "Basecamp Trek",
+      icon: "/images/clients/Basecamp_trek.png",
     },
     {
-      name: "Nepal Oil Corporation",
+      name: "Berger Paints Nepal",
       sector: "Energy",
-      icon: "/images/clients/noc.svg",
+      icon: "/images/clients/Berger_Paints_Nepal.png",
     },
     {
-      name: "Bir Hospital",
-      sector: "Healthcare",
-      icon: "/images/clients/bir-hospital.svg",
+      name: "CG Corp Global",
+      icon: "/images/clients/cgcorpglobal_logo.jpg",
     },
     {
-      name: "World Bank",
-      sector: "International Development",
-      icon: "/images/clients/world-bank.svg",
+      name: "Dabur Nepal",
+      icon: "/images/clients/Dabur_Nepal.png",
     },
     {
-      name: "Unilever Nepal",
-      sector: "FMCG",
-      icon: "/images/clients/unl.svg",
+      name: "Foodmandu",
+      icon: "/images/clients/Foodmandu.png",
+    },
+    {
+      name: "Ncell",
+      icon: "/images/clients/Ncell.jpg",
+    },
+    {
+      name: "Perfetti Van Melle Nepal",
+      icon: "/images/clients/Perfetti_Van_Melle_Nepal.png",
+    },
+    {
+      name: "Pioneer Law Associates",
+      icon: "/images/clients/Pioneer_Law_Associates.png",
+    },
+    {
+      name: "QFX Cinemas",
+      icon: "/images/clients/QFX-Cinemas.png",
+    },
+    {
+      name: "Saras Beverages Redbull",
+      icon: "/images/clients/Saras_Beverages_Redbull.jpg",
+    },
+    {
+      name: "The Kandel Group",
+      icon: "/images/clients/The_Kandel_Group.png",
+    },
+        {
+      name: "Yeti Brewery",
+      icon: "/images/clients/Yeti_Brewery.png",
     },
   ];
 
@@ -114,12 +135,7 @@ export default function ClientsSection() {
 </div>
 
 
-      <p className="mt-16 text-gray-600">
-        Join 500+ organizations that trust us with their talent acquisition
-      </p>
-      <button className="mt-6 px-6 py-3 border rounded-md text-lg font-semibold text-[#ef4123] bg-white border-[#ef4123] hover:bg-[#d53c1e] hover:text-white group transition-all duration-300">
-        View All Clients
-      </button>
+      
 
       <style jsx>{`
         @keyframes scrollRight {
